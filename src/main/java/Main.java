@@ -1,8 +1,8 @@
 import CommercialGoods.Goods;
 import DB.PrimitiveDB;
-import DB.Starter;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
+
 import java.util.Map;
 
 public class Main {
@@ -10,7 +10,7 @@ public class Main {
         PrimitiveDB db = new PrimitiveDB();
 
 
-        for( Map.Entry<String, Goods> entry : db.getMapOfGoods().entrySet()){
+        for( Map.Entry<String, Goods> entry : db.getMapOfGoods().entries()){
             String key= entry.getKey();
             Goods value = entry.getValue();
             System.out.println("KLUCZ: " + key + " WARTOSC: " + value.getName());

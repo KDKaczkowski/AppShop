@@ -3,10 +3,10 @@ package DB;
 import CommercialGoods.Goods;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
-import Users.*;
-import com.google.common.collect.Multimap;
-import com.google.common.collect.Multimaps;
-
+import Users.Admin;
+import Users.Customer;
+import com.google.common.collect.MultimapBuilder;
+import com.google.common.collect.SetMultimap;
 
 import java.util.*;
 
@@ -30,7 +30,7 @@ public class PrimitiveDB  implements DB{
     private Set <Customer> setOfCustomers = new HashSet<Customer>();
 
 
-    private Multimap<String, Goods> mapOfGoods= new Multima<String, Goods>();
+    private SetMultimap<String, Goods> mapOfGoods= MultimapBuilder.hashKeys().hashSetValues().build();
 
     private List<String> listOfBakeries = new ArrayList<String>();
 
@@ -88,9 +88,7 @@ public class PrimitiveDB  implements DB{
     }
 
     public Goods getGoodByName(String name) throws ObjectNotFound {
-        for( Map.Entry<String, Goods> entry : mapOfGoods.entrySet()){
-            String key= entry.getKey();
-            Goods value = entry.getValue();
+        for(Goods value: mapOfGoods.values()){
             if(value.getName() == name)
                 return value;
         }
@@ -100,7 +98,7 @@ public class PrimitiveDB  implements DB{
     public List<Goods> getGoodsOfType(String type) throws ObjectNotFound {
         List<Goods> results = new ArrayList<Goods>();
         if(inTYPES( type )) {
-            for (Map.Entry<String, Goods> entry : mapOfGoods.entrySet()) {
+            for (Map.Entry<String, Goods> entry : mapOfGoods.entries()) {
                 String key = type;
                 Goods value = entry.getValue();
                 results.add(value);
@@ -131,7 +129,7 @@ public class PrimitiveDB  implements DB{
 
     public Goods getGoodByNameAndType(String name, String type) throws ObjectNotFound {
         if( inTYPES( type ) ) {
-            for (Map.Entry<String, Goods> entry : mapOfGoods.entrySet()) {
+            for (Map.Entry<String, Goods> entry : mapOfGoods.entries()) {
                 String key = type;
                 Goods value = entry.getValue();
                 if( name == value.getName() )
@@ -141,7 +139,7 @@ public class PrimitiveDB  implements DB{
         throw new ObjectNotFound();
     }
 
-    public Map<String, Goods> getMapOfGoods() {
+    public SetMultimap<String, Goods> getMapOfGoods() {
         return mapOfGoods;
     }
 
