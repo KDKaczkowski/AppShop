@@ -7,30 +7,38 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
 public class Admin extends User {
-    public Admin() {
-    }
-
-    private void createAdmin(PrimitiveDB db){
-        Admin admin = new Admin();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter name of admin:");
-        admin.setName(input.nextLine());
-        try {
-            db.getAdminByName(admin.getName());
-        }
-        catch(ObjectNotFound objectNotFound){
-            System.out.println("Enter password of admin");
+    public Admin(boolean auto, PrimitiveDB db) {
+        if(auto == false) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter name of admin:");
+            this.setName(input.nextLine());
             try {
-                admin.setPassword(input.nextLine());
+                db.getAdminByName(this.getName());
+            } catch (ObjectNotFound objectNotFound) {
+                System.out.println("Enter password of admin");
+                try {
+                    this.setPassword(input.nextLine());
+                } catch (NoSuchAlgorithmException e) {
+                    System.out.println("Cant create admin");
+                }
+                db.addAdmin(this);
+                return;
             }
-            catch (NoSuchAlgorithmException e){
-                System.out.println("Cant create admin");
-            }
-                db.addAdmin(admin);
+            System.out.println("Name already taken! Try with another name");
+            new Admin(auto, db);
             return;
         }
-        System.out.println("Name already taken! Try with another name");
-        createAdmin(db);
+        else{
 
+        }
     }
+    //\\TODELETE
+    private Admin createAdmin(String name, String password, PrimitiveDB db) throws NoSuchAlgorithmException{
+        Admin admin = new Admin(false, db);
+        admin.setName(name);
+        admin.setPassword(password);
+        return admin;
+    }
+
+
 }

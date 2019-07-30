@@ -2,10 +2,10 @@ package DB;
 
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class PrimitiveDBTest {
 
@@ -42,7 +42,16 @@ class PrimitiveDBTest {
     }
 
     @org.junit.jupiter.api.Test
-    void getGoodsOfType() {
+    void getGoodsOfType() throws AdditionFailed, ObjectNotFound{
+        assertNotNull(new PrimitiveDB().getGoodsOfType("Bakery"));
+    }
+
+    @Test
+    void ShouldReturnExceptionGetGoodsOfType() throws ObjectNotFound, AdditionFailed{
+        ObjectNotFound exception = assertThrows(
+                ObjectNotFound.class,
+                () -> new PrimitiveDB().getGoodsOfType("Jajko")
+        );
     }
 
     @org.junit.jupiter.api.Test

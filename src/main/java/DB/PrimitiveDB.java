@@ -5,8 +5,8 @@ import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
 import Users.Admin;
 import Users.Customer;
+import com.google.common.collect.ListMultimap;
 import com.google.common.collect.MultimapBuilder;
-import com.google.common.collect.SetMultimap;
 
 import java.util.*;
 
@@ -30,7 +30,7 @@ public class PrimitiveDB  implements DB{
     private Set <Customer> setOfCustomers = new HashSet<Customer>();
 
 
-    private SetMultimap<String, Goods> mapOfGoods= MultimapBuilder.hashKeys().hashSetValues().build();
+    private ListMultimap<String, Goods> mapOfGoods= MultimapBuilder.hashKeys().arrayListValues().build();
 
     private List<String> listOfBakeries = new ArrayList<String>();
 
@@ -88,21 +88,19 @@ public class PrimitiveDB  implements DB{
     }
 
     public Goods getGoodByName(String name) throws ObjectNotFound {
-        for(Goods value: mapOfGoods.values()){
-            if(value.getName() == name)
+        for(Goods value: mapOfGoods.values()) {
+            if (value.getName() == name){
+                System.out.println(value.getName());
                 return value;
+        }
         }
         throw new ObjectNotFound();
     }
 
     public List<Goods> getGoodsOfType(String type) throws ObjectNotFound {
-        List<Goods> results = new ArrayList<Goods>();
+
         if(inTYPES( type )) {
-            for (Map.Entry<String, Goods> entry : mapOfGoods.entries()) {
-                String key = type;
-                Goods value = entry.getValue();
-                results.add(value);
-            }
+            return mapOfGoods.get(type);
         }
         throw new ObjectNotFound();
 
@@ -139,7 +137,7 @@ public class PrimitiveDB  implements DB{
         throw new ObjectNotFound();
     }
 
-    public SetMultimap<String, Goods> getMapOfGoods() {
+    public ListMultimap<String, Goods> getMapOfGoods() {
         return mapOfGoods;
     }
 
