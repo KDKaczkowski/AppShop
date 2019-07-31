@@ -8,6 +8,7 @@ import Users.Customer;
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.MultimapBuilder;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class PrimitiveDB  implements DB{
@@ -44,7 +45,7 @@ public class PrimitiveDB  implements DB{
     ////////////////////////////////////////////////////////////
     public Admin getAdminByName(String name) throws ObjectNotFound {
         for(Admin admin: setOfAdmins){
-            if(admin.getName() == name)
+            if(admin.getName().equals(name))
                 return admin;
         }
         throw new ObjectNotFound();
@@ -197,7 +198,7 @@ public class PrimitiveDB  implements DB{
         this.listOfMeats.add(name);
     }
 
-    private void STARTER() throws AdditionFailed {
+    private void STARTER() throws AdditionFailed{
         mapOfGoods.put("Bakery", new Goods("Dark bread", "Bakery", 12, 12, true));
         // BAKERY /////
         this.addBakery("White bread");
@@ -290,5 +291,17 @@ public class PrimitiveDB  implements DB{
         this.addNewGood(new Goods("Śląska gięta", TYPES[4], 12, 2.50, false));
         this.addNewGood(new Goods("Normal Sausage", TYPES[4], 12, 2.50, false));
         this.addNewGood(new Goods("Roasted chicken", TYPES[4], 12, 2.50, false));
+
+        //////ADMIN////////
+
+        try {
+            Admin admin2 = new Admin("Jerzy", "Woroniczak", this);
+            Admin admin3 = new Admin("Bartosz", "hulajnoga", this);
+            Admin admin4 = new Admin(this);
+            Customer customer1 = new Customer("Jack", "lejna", 350, this);
+        }catch(NoSuchAlgorithmException e){        }
+        catch (ObjectNotFound o){}
+
+
     }
 }

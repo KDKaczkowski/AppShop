@@ -10,7 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 class PrimitiveDBTest {
 
     @org.junit.jupiter.api.Test
-    void getAdminByName() {
+    void getAdminByName() throws AdditionFailed, ObjectNotFound {
+        assertNotNull(new PrimitiveDB().getAdminByName("Bartosz"));
     }
 
     @org.junit.jupiter.api.Test

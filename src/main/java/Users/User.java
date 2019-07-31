@@ -1,12 +1,8 @@
 package Users;
 
-import DB.PrimitiveDB;
-import Exceptions.ObjectNotFound;
-
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Scanner;
 import java.util.UUID;
 
 public abstract class User {
@@ -41,29 +37,27 @@ public abstract class User {
         }
 
     }
-    private void createCustomer(PrimitiveDB db){
-        Customer customer = new Customer();
-        Scanner input = new Scanner(System.in);
+    /*private void createCustomer(String name, String password, double cash, PrimitiveDB db){
+        Customer customer = new Customer(db);
         System.out.println("Enter name of admin:");
-        customer.setName(input.nextLine());
+        customer.setName(name);
         try {
             db.getAdminByName(customer.getName());
         }
         catch(ObjectNotFound objectNotFound){
-            System.out.println("Enter password of admin");
+
             try {
-                customer.setPassword(input.nextLine());
+                customer.setPassword(password);
             }
             catch (NoSuchAlgorithmException nosuchalgorithexception){
-                System.out.println("Can't create customer");
-            }
 
-                db.addCustomer(customer);
-            return;
+            }
+            customer.setCashOnAccount(cash);
+            db.addCustomer(customer);
+
         }
-        System.out.println("Name already taken! Try with another name");
-        createCustomer(db);
-    }
+
+    }*/
 
 
 }
