@@ -54,7 +54,7 @@ public class PrimitiveDB  implements DB{
 
     public Customer getCustomerByName(String name) throws ObjectNotFound {
         for(Customer customer: setOfCustomers){
-            if(customer.getName() == name)
+            if(customer.getName().equals(name))
                 return customer;
         }
         throw new ObjectNotFound();
@@ -78,20 +78,19 @@ public class PrimitiveDB  implements DB{
 
     public String getPasswordByName(String name) throws ObjectNotFound {
         for(Admin admin: setOfAdmins){
-            if(admin.getName() == name)
-                return admin.getName();
+            if(admin.getName().equals(name))
+                return admin.getPassword();
         }
         for(Customer customer: setOfCustomers){
             if(customer.getName() == name)
-                return customer.getName();
+                return customer.getPassword();
         }
         throw new ObjectNotFound();
     }
 
     public Goods getGoodByName(String name) throws ObjectNotFound {
         for(Goods value: mapOfGoods.values()) {
-            if (value.getName() == name){
-                System.out.println(value.getName());
+            if (value.getName().equals(name)){
                 return value;
         }
         }
@@ -131,7 +130,7 @@ public class PrimitiveDB  implements DB{
             for (Map.Entry<String, Goods> entry : mapOfGoods.entries()) {
                 String key = type;
                 Goods value = entry.getValue();
-                if( name == value.getName() )
+                if( value.getName().equals(name))
                     return value;
             }
         }
@@ -299,6 +298,9 @@ public class PrimitiveDB  implements DB{
             Admin admin3 = new Admin("Bartosz", "hulajnoga", this);
             Admin admin4 = new Admin(this);
             Customer customer1 = new Customer("Jack", "lejna", 350, this);
+            Customer customer2 = new Customer(this);
+            Customer customer3 = new Customer("Andrew", "Duda", 20,  this);
+
         }catch(NoSuchAlgorithmException e){        }
         catch (ObjectNotFound o){}
 

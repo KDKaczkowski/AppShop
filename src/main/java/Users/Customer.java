@@ -5,6 +5,7 @@ import Exceptions.ObjectNotFound;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
@@ -52,27 +53,46 @@ public class Customer extends User {
         }
     }
     public Customer(PrimitiveDB db) {
-            Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
+        int i = 1;
+        double temp;
+
+        while(i++ > 0) {
             System.out.println("Enter name of customer:");
-            this.setName(input.nextLine());
+            if(i>2)
+                input.nextLine();
+            String name = input.nextLine();
             try {
-                db.getCustomerByName(this.getName());
+                db.getCustomerByName(name);
             } catch (ObjectNotFound objectNotFound) {
+                if (name.isEmpty() || name.equals(" ")) {
+                    System.out.println("Wrong name! Try again");
+                    i=1;
+                    continue;
+                }
                 System.out.println("Enter password of customer");
                 try {
                     this.setPassword(input.nextLine());
                 } catch (NoSuchAlgorithmException e) {
                     System.out.println("Cant create customer");
+                    return;
                 }
-                System.out.println("Enter how many cash " + this.getName() + "have");
-                this.setCashOnAccount(input.nextDouble());
 
+                System.out.println("Enter how many cash " + name + " have");
+                try{
+                    temp = input.nextDouble();
+                } catch(InputMismatchException e){
+                    System.out.println("Wrong value! You have to enter cash as number.");
+                    i = 2;
+                    continue;
+                }
+                this.setName(name);
+                this.setCashOnAccount(input.nextDouble());
                 db.addCustomer(this);
                 return;
             }
             System.out.println("Name already taken! Try with another name");
-            new Customer(db);
-
-
-    }
+            i=1;
+        }
+        }
 }
