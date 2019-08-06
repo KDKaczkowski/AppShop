@@ -13,7 +13,7 @@ import java.util.*;
 
 public class PrimitiveDB  implements DB{
 
-    private final String [] TYPES = {"Bakery", "Candy", "Dairy", "Drink", "Meat"};
+   private final String [] TYPES = {"Bakery", "Candy", "Dairy", "Drink", "Meat"};
     private boolean inTYPES(String type){
         for (int i = 0; i < 5; i++) {
             if(type == TYPES[i])
@@ -22,8 +22,14 @@ public class PrimitiveDB  implements DB{
         return false;
     }
 
-    public PrimitiveDB() throws AdditionFailed{
-        this.STARTER();
+    public String[] getTYPES() {
+        return TYPES;
+    }
+
+
+    public PrimitiveDB(boolean clear) throws AdditionFailed{
+        if(!clear)
+            this.STARTER();
     }
 
     private Set <Admin> setOfAdmins = new HashSet<Admin>();
@@ -37,7 +43,7 @@ public class PrimitiveDB  implements DB{
 
     private List<String> listOfCandies = new ArrayList<String>();
 
-    private List<String> listOfDaires = new ArrayList<String>();
+    private List<String> listOfDairies = new ArrayList<String>();
 
     private List<String> listOfDrinks = new ArrayList<String>();
 
@@ -82,7 +88,7 @@ public class PrimitiveDB  implements DB{
                 return admin.getPassword();
         }
         for(Customer customer: setOfCustomers){
-            if(customer.getName() == name)
+            if(customer.getName().equals(name))
                 return customer.getPassword();
         }
         throw new ObjectNotFound();
@@ -173,12 +179,12 @@ public class PrimitiveDB  implements DB{
         this.listOfCandies.add(name);
     }
 
-    public List<String> getListOfDaires() {
-        return listOfDaires;
+    public List<String> getListOfDairies() {
+        return listOfDairies;
     }
 
     public void addDairy(String name) {
-        this.listOfDaires.add(name);
+        this.listOfDairies.add(name);
     }
 
     public List<String> getListOfDrinks() {
@@ -198,7 +204,6 @@ public class PrimitiveDB  implements DB{
     }
 
     private void STARTER() throws AdditionFailed{
-        mapOfGoods.put("Bakery", new Goods("Dark bread", "Bakery", 12, 12, true));
         // BAKERY /////
         this.addBakery("White bread");
         this.addBakery("Dark bread");

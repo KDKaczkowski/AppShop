@@ -3,12 +3,13 @@ import DB.PrimitiveDB;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
 import Users.Admin;
+import Users.Customer;
 
 import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws AdditionFailed, ObjectNotFound {
-        PrimitiveDB db = new PrimitiveDB();
+        PrimitiveDB db = new PrimitiveDB(false);
 
 
         for( Map.Entry<String, Goods> entry : db.getMapOfGoods().entries()){
@@ -21,12 +22,23 @@ public class Main {
             System.out.println(element.getName());
         }
         for(Admin el : db.getSetOfAdmins()){
-            System.out.println(el.getId() + "   Name" + el.getName() +"   " + el.getPassword());
+            System.out.println("   Name" + el.getName());
         }
-        System.out.println(db.getAdminByName(db.getAdminByName("Bartosz").getName()).getName());
-        System.out.println(db.getAdminByName("Jerzy").getName());
-        System.out.println(db.getAdminByName("jajo").getName());
 
+        try {
+            System.out.println(db.getAdminByName("jajo").getName());
+        }
+        catch(ObjectNotFound o){
+
+        }
+
+        for(Customer el : db.getSetOfCustomers()){
+            System.out.println("   Name" + el.getName());
+        }
+
+        for(Goods element : db.getGoodsOfType("Candy")){
+            System.out.println(element.getName());
+        }
 
 
     }

@@ -24,21 +24,44 @@ public class Admin extends User {
     }
 
     public Admin(PrimitiveDB db) throws ObjectNotFound, NoSuchAlgorithmException {
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter name of admin:");
-        String name = input.nextLine();
-        try {
-            db.getAdminByName(name).getName();
-        } catch (ObjectNotFound objectNotFound){
-            this.setName(name);
-            System.out.println("Enter password of admin");
-            this.setPassword(input.nextLine());
-            db.addAdmin(this);
-            return;
-        }
 
-        System.out.println("Name already taken! Try with another name");
-        new Admin(db);
+        while(true) {
+            Scanner input = new Scanner(System.in);
+            System.out.println("Enter name of admin:");
+            //NAME
+            String  name = input.nextLine();
+            try {
+                db.getCustomerByName(name);
+                db.getAdminByName(name);
+            } catch (ObjectNotFound objectNotFound) {
+                if (name.isEmpty() || name.equals(" ")) {
+                    System.out.println("Wrong name! Try again");
+                    continue;
+                }
+
+                //PASSWORD
+                System.out.println("Enter password of admin");
+                String password = input.nextLine();
+                if (password.isEmpty() || password.equals(" ")) {
+                    System.out.println("Wrong password! Try again");
+                    continue;
+                }
+
+
+
+                //SETTING
+                try {
+                    this.setPassword(password);
+                } catch (NoSuchAlgorithmException e) {
+                    System.out.println("Cant create admin");
+                    return;
+                }
+                this.setName(name);
+                db.addAdmin(this);
+                return;
+            }
+            System.out.println("Name already taken! Try with another name");
+        }
 
 
 

@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Customer extends User {
-    private Basket basket;
+    private Basket basket = new Basket();
     private List<Basket> historicalBaskets = new ArrayList<Basket>();
     private double cashOnAccount;
 
@@ -42,57 +42,78 @@ public class Customer extends User {
             db.getCustomerByName(name);
         }
         catch(ObjectNotFound objectNotFound){
-            this.setName(name);
+
+            if (name.isEmpty() || name.equals(" "))
+                return;
+            if (password.isEmpty() || password.equals(" "))
+                return;
+            if(cash < 0)
+                return;
+
             try{
                 this.setPassword(password);
             } catch (NoSuchAlgorithmException e){
-
+                return;
             }
+            this.setName(name);
             this.setCashOnAccount(cash);
             db.addCustomer(this);
         }
+        return;
     }
-    public Customer(PrimitiveDB db) {
-        Scanner input = new Scanner(System.in);
-        int i = 1;
+    public Customer(PrimitiveDB db){
         double temp;
 
-        while(i++ > 0) {
+        while(true) {
+            Scanner input = new Scanner(System.in);
             System.out.println("Enter name of customer:");
-            if(i>2)
-                input.nextLine();
-            String name = input.nextLine();
+            //NAME
+            String  name = input.nextLine();
             try {
                 db.getCustomerByName(name);
+                db.getAdminByName(name);
             } catch (ObjectNotFound objectNotFound) {
                 if (name.isEmpty() || name.equals(" ")) {
                     System.out.println("Wrong name! Try again");
-                    i=1;
                     continue;
                 }
+
+                //PASSWORD
                 System.out.println("Enter password of customer");
-                try {
-                    this.setPassword(input.nextLine());
-                } catch (NoSuchAlgorithmException e) {
-                    System.out.println("Cant create customer");
-                    return;
+                String password = input.nextLine();
+                if (password.isEmpty() || password.equals(" ")) {
+                    System.out.println("Wrong password! Try again");
+                    continue;
                 }
 
-                System.out.println("Enter how many cash " + name + " have");
+                //CASH
+                System.out.println("Enter how many cash " + name +" have");
                 try{
                     temp = input.nextDouble();
                 } catch(InputMismatchException e){
                     System.out.println("Wrong value! You have to enter cash as number.");
-                    i = 2;
                     continue;
+
+                }
+
+                //SETTING
+                try {
+                    this.setPassword(password);
+                } catch (NoSuchAlgorithmException e) {
+                    System.out.println("Cant create customer");
+                    return;
                 }
                 this.setName(name);
-                this.setCashOnAccount(input.nextDouble());
+                this.setCashOnAccount(temp);
                 db.addCustomer(this);
                 return;
             }
             System.out.println("Name already taken! Try with another name");
-            i=1;
         }
-        }
+    }
+    public void createNewBasket(){
+        if (!historicalBaskets.isEmpty())
+            historicalBaskets.add(this.basket);
+        this.basket.clearBasket();
+    }
 }
