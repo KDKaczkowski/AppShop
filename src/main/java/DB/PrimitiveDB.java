@@ -255,46 +255,47 @@ public class PrimitiveDB  implements DB{
         this.addNewGood(new Goods("White bread", TYPES[0], 12, 2.50, true) );
         this.addNewGood(new Goods("Dark bread", TYPES[0], 10, 2.90, true) );
         this.addNewGood(new Goods("Sliced white bread", TYPES[0], 12, 2.50, true));
-        this.addNewGood(new Goods("Sliced dark bread", TYPES[0], 12, 2.50, true));
-        this.addNewGood(new Goods("Kaiser roll", TYPES[0], 12, 2.50, true));
-        this.addNewGood(new Goods("Chocolate donut", TYPES[0], 12, 2.50, true));
-        this.addNewGood(new Goods("Donut", TYPES[0], 12, 2.50, true));
-        this.addNewGood(new Goods("Pudding donut", TYPES[0], 12, 2.50, true));
+        this.addNewGood(new Goods("Sliced dark bread", TYPES[0], 12, 2.90, true));
+        this.addNewGood(new Goods("Kaiser roll", TYPES[0], 12, 0.39, true));
+        this.addNewGood(new Goods("Chocolate donut", TYPES[0], 12, 3.50, true));
+        this.addNewGood(new Goods("Donut", TYPES[0], 12, 3.10, true));
+        this.addNewGood(new Goods("Pudding donut", TYPES[0], 12, 3.50, true));
         // CANDY /////
-        this.addNewGood(new Goods("Dark chocolate", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Milky chocolate", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("White chocolate", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Mars", TYPES[1], 12, 2.50, true));
+        this.addNewGood(new Goods("Dark chocolate", TYPES[1], 12, 3.99, true));
+        this.addNewGood(new Goods("Milky chocolate", TYPES[1], 12, 3.99, true));
+        this.addNewGood(new Goods("White chocolate", TYPES[1], 12, 3.99, true));
+        this.addNewGood(new Goods("Mars", TYPES[1], 12, 2.10, true));
         this.addNewGood(new Goods("NoName", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Snickers", TYPES[1], 12, 2.50, true));
+        this.addNewGood(new Goods("Snickers", TYPES[1], 12, 2.90, true));
         this.addNewGood(new Goods("Knoppers", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Jelly", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Python's jellies", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Lay's Paprika", TYPES[1], 12, 2.50, true));
-        this.addNewGood(new Goods("Lay's Fromage", TYPES[1], 12, 2.50, true));
+        this.addNewGood(new Goods("Jelly beans", TYPES[1], 12, 4.99, true));
+        this.addNewGood(new Goods("Python's jellies", TYPES[1], 12, 7.99, true));
+        this.addNewGood(new Goods("Lay's Paprika", TYPES[1], 12, 5.99, true));
+        this.addNewGood(new Goods("Lay's Fromage", TYPES[1], 12, 5.99, true));
+        this.addNewGood(new Goods("M&M's", TYPES[1], 15, 4.80, true));
         // DAIRY /////
-        this.addNewGood(new Goods("Milk", TYPES[2], 12, 2.50, true));
-        this.addNewGood(new Goods("Chocolate milk", TYPES[2], 12, 2.50, true));
+        this.addNewGood(new Goods("Milk", TYPES[2], 12, 2.49, true));
+        this.addNewGood(new Goods("Chocolate milk", TYPES[2], 12, 4.49, true));
         this.addNewGood(new Goods("Yoghurt with strawberries", TYPES[2], 12, 2.50, true));
         this.addNewGood(new Goods("Yoghurt with pineapple", TYPES[2], 12, 2.50, true));
-        this.addNewGood(new Goods("Yoghurt", TYPES[2], 12, 2.50, true));
-        this.addNewGood(new Goods("Cheese", TYPES[2], 12, 2.50, true));
-        this.addNewGood(new Goods("White Cheese", TYPES[2], 12, 2.50, true));
+        this.addNewGood(new Goods("Yoghurt", TYPES[2], 12, 1.99, true));
+        this.addNewGood(new Goods("Cheese", TYPES[2], 12, 5.39, true));
+        this.addNewGood(new Goods("White Cheese", TYPES[2], 12, 3.99, true));
         // DRINKS /////
-        this.addNewGood(new Goods("Coca Cola", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("Water", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("Sprite", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("Monster", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("Mountain Dew", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("Coconut water", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("Zbyszko trzy cytryny", TYPES[3], 12, 2.50, true));
-        this.addNewGood(new Goods("RedBull", TYPES[3], 12, 2.50, true));
+        this.addNewGood(new Goods("Coca Cola", TYPES[3], 12, 5.99, true));
+        this.addNewGood(new Goods("Water", TYPES[3], 12, 1.19, true));
+        this.addNewGood(new Goods("Sprite", TYPES[3], 12, 4.49, true));
+        this.addNewGood(new Goods("Monster", TYPES[3], 12, 6.29, true));
+        this.addNewGood(new Goods("Mountain Dew", TYPES[3], 12, 3.59, true));
+        this.addNewGood(new Goods("Coconut water", TYPES[3], 12, 8.99, true));
+        this.addNewGood(new Goods("Zbyszko trzy cytryny", TYPES[3], 12, 10.99, true));
+        this.addNewGood(new Goods("RedBull", TYPES[3], 12, 1.99, true));
         // MEATS /////
-        this.addNewGood(new Goods("Ham", TYPES[4], 12, 2.50, false));
-        this.addNewGood(new Goods("Parma ham", TYPES[4], 12, 2.50, false));
-        this.addNewGood(new Goods("Śląska gięta", TYPES[4], 12, 2.50, false));
-        this.addNewGood(new Goods("Normal Sausage", TYPES[4], 12, 2.50, false));
-        this.addNewGood(new Goods("Roasted chicken", TYPES[4], 12, 2.50, false));
+        this.addNewGood(new Goods("Ham", TYPES[4], 12, 26.89, false));
+        this.addNewGood(new Goods("Parma ham", TYPES[4], 12, 45.99, false));
+        this.addNewGood(new Goods("Śląska gięta", TYPES[4], 12, 12.69, false));
+        this.addNewGood(new Goods("Normal Sausage", TYPES[4], 12, 19.99, false));
+        this.addNewGood(new Goods("Roasted chicken", TYPES[4], 12, 18.99, false));
 
         //////ADMIN////////
 

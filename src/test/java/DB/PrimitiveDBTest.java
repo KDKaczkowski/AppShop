@@ -72,7 +72,7 @@ class PrimitiveDBTest{
 
     @Test
     void getCustomerByIdFailed(){
-        System.out.println("Music for 4'33'' ");
+        System.out.println("Notes in 4'33'' ");
         ObjectNotFound notFound = assertThrows(
                 ObjectNotFound.class,
                 () -> db.getCustomerById(UUID.randomUUID())
