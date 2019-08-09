@@ -111,9 +111,18 @@ public class Customer extends User {
             System.out.println("Name already taken! Try with another name");
         }
     }
+
+
     public void createNewBasket(){
         if (!historicalBaskets.isEmpty())
             historicalBaskets.add(this.basket);
         this.basket.clearBasket();
+    }
+
+    public boolean equals(Customer customer){
+        return ( this.getId().toString().equals( customer.getId().toString() )
+                && this.getName().equals( customer.getName() )
+                && this.getPassword().equals( customer.getPassword() )
+                );
     }
 }

@@ -22,7 +22,7 @@ public class Main {
             System.out.println(element.getName());
         }
         for(Admin el : db.getSetOfAdmins()){
-            System.out.println("   Name" + el.getName());
+            System.out.println("   Name" + el.getName() + "Pass  " + el.getPassword().toString());
         }
 
         try {

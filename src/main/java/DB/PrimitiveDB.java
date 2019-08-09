@@ -301,13 +301,11 @@ public class PrimitiveDB  implements DB{
         try {
             Admin admin2 = new Admin("Jerzy", "Woroniczak", this);
             Admin admin3 = new Admin("Bartosz", "hulajnoga", this);
-            Admin admin4 = new Admin(this);
             Customer customer1 = new Customer("Jack", "lejna", 350, this);
-            Customer customer2 = new Customer(this);
             Customer customer3 = new Customer("Andrew", "Duda", 20,  this);
 
         }catch(NoSuchAlgorithmException e){        }
-        catch (ObjectNotFound o){}
+
 
 
     }

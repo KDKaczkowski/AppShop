@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5f046c-8098-42a8-82ff-0272fc802407" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Basket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Basket.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Users/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Customer.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,8 +33,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+            <state relative-caret-position="475">
+              <caret line="307" selection-start-line="307" selection-end-line="307" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#656#657#0" expanded="true" />
@@ -48,27 +45,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="60">
+              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Basket.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="method#Basket#0;class#Basket#0" />
               </folding>
             </state>
           </provider>
@@ -77,8 +68,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
+            <state relative-caret-position="595">
+              <caret line="124" column="68" selection-start-line="124" selection-start-column="68" selection-end-line="124" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -98,8 +89,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+            <state relative-caret-position="2595">
+              <caret line="173" column="56" selection-start-line="173" selection-start-column="56" selection-end-line="173" selection-end-column="56" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -108,19 +99,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
+            <state relative-caret-position="45">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+            <state relative-caret-position="600">
+              <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -128,8 +119,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+            <state relative-caret-position="385">
+              <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -166,12 +157,14 @@
         <option value="$PROJECT_DIR$/src/main/java/DB/Starter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/DB/Types.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/User.java" />
         <option value="$PROJECT_DIR$/src/main/java/Users/Basket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Users/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Users/Admin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Users/Customer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" />
         <option value="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" />
       </list>
     </option>
@@ -279,8 +272,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -297,6 +290,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -321,15 +315,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PrimitiveDBTest.getCustomerByName">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="AppShop" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PrimitiveDBTest.ShouldReturnExceptionGetGoodsOfType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PrimitiveDBTest">
+    <configuration name="PrimitiveDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -339,13 +326,28 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="ShouldReturnExceptionGetGoodsOfType" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PrimitiveDBTest.getCustomerByIdFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DB.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DB" />
+      <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
+      <option name="METHOD_NAME" value="getCustomerByIdFailed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getAdminByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.getGoodByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -355,13 +357,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getAdminByName" />
+      <option name="METHOD_NAME" value="getGoodByName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getCustomerById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.getGoodByNameAndType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -371,13 +373,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getCustomerById" />
+      <option name="METHOD_NAME" value="getGoodByNameAndType" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getCustomerByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.getGoodByNameAndTypeFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -387,7 +389,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getCustomerByName" />
+      <option name="METHOD_NAME" value="getGoodByNameAndTypeFailed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -395,11 +397,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PrimitiveDBTest.getCustomerByName" />
-        <item itemvalue="JUnit.PrimitiveDBTest.getCustomerById" />
-        <item itemvalue="JUnit.PrimitiveDBTest.getAdminByName" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.PrimitiveDBTest.ShouldReturnExceptionGetGoodsOfType" />
+        <item itemvalue="JUnit.PrimitiveDBTest" />
+        <item itemvalue="JUnit.PrimitiveDBTest.getGoodByNameAndType" />
+        <item itemvalue="JUnit.PrimitiveDBTest.getGoodByName" />
+        <item itemvalue="JUnit.PrimitiveDBTest.getCustomerByIdFailed" />
+        <item itemvalue="JUnit.PrimitiveDBTest.getGoodByNameAndTypeFailed" />
       </list>
     </recent_temporary>
   </component>
@@ -422,48 +424,58 @@
       <workItem from="1565023388027" duration="3434000" />
       <workItem from="1565030320428" duration="1076000" />
       <workItem from="1565116056414" duration="3404000" />
+      <workItem from="1565340482663" duration="9127000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PrimitiveDBTest_getGoodByName - 2019.07.30 at 14h 41m 13s.xml">
+    <history-entry file="PrimitiveDBTest - 2019.08.09 at 12h 34m 51s.xml">
+      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest_getGoodByNameAndType - 2019.08.09 at 14h 58m 09s.xml">
+      <configuration name="PrimitiveDBTest.getGoodByNameAndType" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest_getGoodByNameAndType - 2019.08.09 at 15h 10m 28s.xml">
+      <configuration name="PrimitiveDBTest.getGoodByNameAndType" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest - 2019.08.09 at 15h 10m 40s.xml">
+      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest_getGoodByNameAndTypeFailed - 2019.08.09 at 15h 15m 09s.xml">
+      <configuration name="PrimitiveDBTest.getGoodByNameAndTypeFailed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest_getGoodByNameAndTypeFailed - 2019.08.09 at 15h 15m 49s.xml">
+      <configuration name="PrimitiveDBTest.getGoodByNameAndTypeFailed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest_getCustomerByIdFailed - 2019.08.09 at 15h 17m 22s.xml">
+      <configuration name="PrimitiveDBTest.getCustomerByIdFailed" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PrimitiveDBTest_getGoodByName - 2019.08.09 at 15h 25m 58s.xml">
       <configuration name="PrimitiveDBTest.getGoodByName" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getGoodByName - 2019.07.30 at 14h 42m 31s.xml">
-      <configuration name="PrimitiveDBTest.getGoodByName" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_getGoodByNameAndType - 2019.08.09 at 15h 26m 07s.xml">
+      <configuration name="PrimitiveDBTest.getGoodByNameAndType" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_ShouldReturnExceptionGetGoodsOfType - 2019.07.30 at 14h 58m 23s.xml">
-      <configuration name="PrimitiveDBTest.ShouldReturnExceptionGetGoodsOfType" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getAdminByName - 2019.07.31 at 14h 27m 47s.xml">
-      <configuration name="PrimitiveDBTest.getAdminByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getAdminByName - 2019.07.31 at 14h 28m 18s.xml">
-      <configuration name="PrimitiveDBTest.getAdminByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getAdminByName - 2019.07.31 at 14h 28m 57s.xml">
-      <configuration name="PrimitiveDBTest.getAdminByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getAdminByName - 2019.08.06 at 20h 52m 17s.xml">
-      <configuration name="PrimitiveDBTest.getAdminByName" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getCustomerById - 2019.08.06 at 21h 21m 05s.xml">
-      <configuration name="PrimitiveDBTest.getCustomerById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getCustomerById - 2019.08.06 at 21h 23m 00s.xml">
-      <configuration name="PrimitiveDBTest.getCustomerById" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_getCustomerByName - 2019.08.06 at 21h 23m 28s.xml">
-      <configuration name="PrimitiveDBTest.getCustomerByName" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest - 2019.08.09 at 15h 26m 28s.xml">
+      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37272000" />
+    <option name="totallyTimeSpent" value="46399000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15329275" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15495296" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -476,7 +488,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32913387" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
@@ -532,18 +544,6 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Main.java</url>
-          <line>15</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ShopApp$PrimitiveDBTest_getGoodByName.ic" NAME="PrimitiveDBTest.getGoodByName Coverage Results" MODIFIED="1564478148452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>DB.*</FILTER>
@@ -568,33 +568,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Basket.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="28" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
+        <state relative-caret-position="180">
+          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#397#398#0" expanded="true" />
+            <element signature="method#Basket#0;class#Basket#0" />
           </folding>
         </state>
       </provider>
@@ -606,57 +588,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/AdditionFailed.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Starter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="method#Basket#0;class#Basket#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="73" column="34" selection-start-line="73" selection-start-column="34" selection-end-line="73" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+        <state relative-caret-position="475">
+          <caret line="307" selection-start-line="307" selection-end-line="307" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#656#657#0" expanded="true" />
@@ -665,10 +607,68 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="34" column="50" lean-forward="true" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="124" column="68" selection-start-line="124" selection-start-column="68" selection-end-line="124" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/AdditionFailed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+        <state relative-caret-position="2595">
+          <caret line="173" column="56" selection-start-line="173" selection-start-column="56" selection-end-line="173" selection-end-column="56" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

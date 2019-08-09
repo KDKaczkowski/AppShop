@@ -1,6 +1,6 @@
 package CommercialGoods;
 
-public  class Goods {
+public  class Goods { // TODO Goods.equals
     private String name;
     private String type;
     private int numberOfGoods;
@@ -52,5 +52,12 @@ public  class Goods {
         this.numberOfGoods = numberOfGoods;
         this.price = price;
         this.pricePerUnit = pricePerUnit;
+    }
+
+    public boolean equals(Goods good){
+        return ( name.equals( good.name)
+                && type.equals( good.type)
+                && price == good.price
+        );
     }
 }
