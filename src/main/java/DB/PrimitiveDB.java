@@ -113,28 +113,41 @@ public class PrimitiveDB  implements DB{
     }
 
 
-    public void addNewGood(Goods goods) throws AdditionFailed {
-        if( inTYPES( goods.getType() ) && !mapOfGoods.containsValue(goods) )
-            mapOfGoods.put(goods.getType(), goods);
-        else
+    public void addNewGood(Goods goods) throws AdditionFailed{
+        if( inTYPES( goods.getType() ) ) {
+            try {
+                getGoodByName(goods.getName());
+            } catch (ObjectNotFound notFound) {
+                mapOfGoods.put(goods.getType(), goods);
+                return;
+            }
+            throw new AdditionFailed();
+        }else
             throw new AdditionFailed();
     }
 
-    public void addOrRemoveExistingGood(String name, double amount) throws AdditionFailed {
-        try {
-            if(getGoodByName(name).getPrice() < amount)
-                throw new AdditionFailed();
-            getGoodByName(name).setPrice( getGoodByName(name).getPrice()+amount);
-        } catch (ObjectNotFound objectNotFound){
-            objectNotFound.printStackTrace();
-            throw new AdditionFailed();
+    public void addOrRemoveExistingGood(String name, double amount){
+        double temp;
+        try{
+            temp = this.getGoodByName(name).getNumberOfGoods();
+        } catch(ObjectNotFound objectNotFound){ //TODO What's better catch Exception here or catch it in main program?
+            return;
         }
+        try {
+            if(temp + amount < 0)
+                throw new AdditionFailed();
+        } catch (AdditionFailed additionFailed){
+            return;
+        }
+        try {
+            this.getGoodByName(name).setNumberOfGoods(temp + amount);
+        } catch(ObjectNotFound o ){}
     }
 
     public Goods getGoodByNameAndType(String name, String type) throws ObjectNotFound {
         if( inTYPES( type ) ) {
             for (Map.Entry<String, Goods> entry : mapOfGoods.entries()) {
-                String key = type;
+                //String key = type;
                 Goods value = entry.getValue();
                 if( value.getName().equals(name))
                     return value;

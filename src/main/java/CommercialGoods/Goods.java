@@ -1,9 +1,11 @@
 package CommercialGoods;
 
+import Exceptions.AdditionFailed;
+
 public  class Goods { // TODO Goods.equals
     private String name;
     private String type;
-    private int numberOfGoods;
+    private double numberOfGoods;
     private double price;
     private boolean pricePerUnit;
     public String getName() {
@@ -30,11 +32,11 @@ public  class Goods { // TODO Goods.equals
         this.type = type;
     }
 
-    public int getNumberOfGoods() {
+    public double getNumberOfGoods() {
         return numberOfGoods;
     }
 
-    public void setNumberOfGoods(int numberOfGoods) {
+    public void setNumberOfGoods(double numberOfGoods) {
         this.numberOfGoods = numberOfGoods;
     }
 
@@ -46,7 +48,9 @@ public  class Goods { // TODO Goods.equals
         this.pricePerUnit = pricePerUnit;
     }
 
-    public Goods(String name, String type, int numberOfGoods, double price, boolean pricePerUnit) {
+    public Goods(String name, String type, double numberOfGoods, double price, boolean pricePerUnit) throws AdditionFailed {
+        if(price <= 0 || numberOfGoods < 0 || name.isEmpty() || name.equals(" "))
+            throw new AdditionFailed();
         this.name = name;
         this.type = type;
         this.numberOfGoods = numberOfGoods;

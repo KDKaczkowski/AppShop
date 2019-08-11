@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5f046c-8098-42a8-82ff-0272fc802407" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" afterDir="false" />
     </list>
@@ -25,15 +26,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="759">
-              <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
+            <state relative-caret-position="400">
+              <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#656#657#0" expanded="true" />
                 <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#4809#4810#0" expanded="true" />
+                <element signature="e#4886#4887#0" expanded="true" />
+                <element signature="e#4970#4971#0" expanded="true" />
+                <element signature="e#5055#5056#0" expanded="true" />
+                <element signature="e#5154#5155#0" expanded="true" />
+                <element signature="e#5238#5239#0" expanded="true" />
+                <element signature="e#5325#5326#0" expanded="true" />
+                <element signature="e#5407#5408#0" expanded="true" />
+                <element signature="e#5492#5493#0" expanded="true" />
+                <element signature="e#5574#5575#0" expanded="true" />
+                <element signature="e#5659#5660#0" expanded="true" />
+                <element signature="e#5739#5740#0" expanded="true" />
+                <element signature="e#5823#5824#0" expanded="true" />
+                <element signature="e#5901#5902#0" expanded="true" />
+                <element signature="e#5983#5984#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -42,20 +58,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
+            <state relative-caret-position="60">
               <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-410">
-              <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="210">
+              <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -78,7 +91,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
+            <state relative-caret-position="699">
               <caret line="124" column="68" selection-start-line="124" selection-start-column="68" selection-end-line="124" selection-end-column="68" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -90,11 +103,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+            <state relative-caret-position="535">
+              <caret line="221" column="5" lean-forward="true" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -108,19 +130,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="510">
               <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -130,10 +143,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/Starter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="45">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -164,9 +177,10 @@
         <option value="$PROJECT_DIR$/src/main/java/Users/Admin.java" />
         <option value="$PROJECT_DIR$/src/main/java/Users/Customer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" />
         <option value="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DB/DB.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" />
       </list>
     </option>
   </component>
@@ -316,23 +330,15 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PrimitiveDBTest.getCustomerByIdFailed">
-    <configuration name="PrimitiveDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AppShop" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="DB.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="DB" />
-      <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getCustomerByIdFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.FullyRemoveExistingGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -342,13 +348,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getCustomerByIdFailed" />
+      <option name="METHOD_NAME" value="FullyRemoveExistingGood" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getGoodByName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -358,13 +364,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getGoodByName" />
+      <option name="METHOD_NAME" value="RemoveExistingGoodFailedTooMuchToRemove" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getGoodByNameAndType" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.addNewGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -374,13 +380,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getGoodByNameAndType" />
+      <option name="METHOD_NAME" value="addNewGood" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.getGoodByNameAndTypeFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PrimitiveDBTest.canNotAddExistingGoodAsNew" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -390,7 +396,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="DB" />
       <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="getGoodByNameAndTypeFailed" />
+      <option name="METHOD_NAME" value="canNotAddExistingGoodAsNew" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -398,11 +404,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PrimitiveDBTest.getCustomerByIdFailed" />
-        <item itemvalue="JUnit.PrimitiveDBTest" />
-        <item itemvalue="JUnit.PrimitiveDBTest.getGoodByNameAndType" />
-        <item itemvalue="JUnit.PrimitiveDBTest.getGoodByName" />
-        <item itemvalue="JUnit.PrimitiveDBTest.getGoodByNameAndTypeFailed" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PrimitiveDBTest.canNotAddExistingGoodAsNew" />
+        <item itemvalue="JUnit.PrimitiveDBTest.addNewGood" />
+        <item itemvalue="JUnit.PrimitiveDBTest.FullyRemoveExistingGood" />
+        <item itemvalue="JUnit.PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" />
       </list>
     </recent_temporary>
   </component>
@@ -427,43 +433,44 @@
       <workItem from="1565116056414" duration="3404000" />
       <workItem from="1565340482663" duration="9127000" />
       <workItem from="1565374102238" duration="975000" />
+      <workItem from="1565519592571" duration="4866000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PrimitiveDBTest - 2019.08.09 at 15h 10m 40s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_RemoveExistingGood - 2019.08.11 at 13h 06m 22s.xml">
+      <configuration name="PrimitiveDBTest.RemoveExistingGood" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getGoodByNameAndTypeFailed - 2019.08.09 at 15h 15m 09s.xml">
-      <configuration name="PrimitiveDBTest.getGoodByNameAndTypeFailed" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_RemoveExistingGoodFailedTooMuchToRemove - 2019.08.11 at 13h 08m 42s.xml">
+      <configuration name="PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getGoodByNameAndTypeFailed - 2019.08.09 at 15h 15m 49s.xml">
-      <configuration name="PrimitiveDBTest.getGoodByNameAndTypeFailed" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_RemoveExistingGoodFailedTooMuchToRemove - 2019.08.11 at 13h 10m 29s.xml">
+      <configuration name="PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getCustomerByIdFailed - 2019.08.09 at 15h 17m 22s.xml">
-      <configuration name="PrimitiveDBTest.getCustomerByIdFailed" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_FullyRemoveExistingGood - 2019.08.11 at 13h 12m 53s.xml">
+      <configuration name="PrimitiveDBTest.FullyRemoveExistingGood" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getGoodByName - 2019.08.09 at 15h 25m 58s.xml">
-      <configuration name="PrimitiveDBTest.getGoodByName" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_addNewGood - 2019.08.11 at 13h 16m 36s.xml">
+      <configuration name="PrimitiveDBTest.addNewGood" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getGoodByNameAndType - 2019.08.09 at 15h 26m 07s.xml">
-      <configuration name="PrimitiveDBTest.getGoodByNameAndType" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_canNotAddExistingGoodAsNew - 2019.08.11 at 13h 19m 21s.xml">
+      <configuration name="PrimitiveDBTest.canNotAddExistingGoodAsNew" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest - 2019.08.09 at 15h 26m 28s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_canNotAddExistingGoodAsNew - 2019.08.11 at 13h 23m 19s.xml">
+      <configuration name="PrimitiveDBTest.canNotAddExistingGoodAsNew" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest - 2019.08.09 at 20h 09m 20s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_addNewGood - 2019.08.11 at 13h 23m 35s.xml">
+      <configuration name="PrimitiveDBTest.addNewGood" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getCustomerByIdFailed - 2019.08.09 at 20h 10m 12s.xml">
-      <configuration name="PrimitiveDBTest.getCustomerByIdFailed" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_addNewGood - 2019.08.11 at 13h 25m 04s.xml">
+      <configuration name="PrimitiveDBTest.addNewGood" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PrimitiveDBTest_getCustomerByIdFailed - 2019.08.09 at 20h 10m 34s.xml">
-      <configuration name="PrimitiveDBTest.getCustomerByIdFailed" configurationId="JUnit" />
+    <history-entry file="PrimitiveDBTest_canNotAddExistingGoodAsNew - 2019.08.11 at 13h 25m 09s.xml">
+      <configuration name="PrimitiveDBTest.canNotAddExistingGoodAsNew" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="47374000" />
+    <option name="totallyTimeSpent" value="52240000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -477,7 +484,7 @@
   <component name="ToolWindowManager">
     <frame x="57" y="25" width="1863" height="1055" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15685195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15850303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -570,17 +577,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="60" column="10" selection-start-line="60" selection-start-column="10" selection-end-line="60" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -598,20 +601,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/AdditionFailed.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-410">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -630,25 +630,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
+        <state relative-caret-position="699">
           <caret line="124" column="68" selection-start-line="124" selection-start-column="68" selection-end-line="124" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -657,22 +640,61 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="74" column="36" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+        <state relative-caret-position="535">
+          <caret line="221" column="5" lean-forward="true" selection-start-line="221" selection-start-column="5" selection-end-line="221" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="52" column="39" selection-start-line="52" selection-start-column="39" selection-end-line="52" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="759">
-          <caret line="313" lean-forward="true" selection-start-line="313" selection-end-line="313" />
+        <state relative-caret-position="400">
+          <caret line="115" column="38" selection-start-line="115" selection-start-column="38" selection-end-line="115" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#656#657#0" expanded="true" />
             <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#4809#4810#0" expanded="true" />
+            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="e#4970#4971#0" expanded="true" />
+            <element signature="e#5055#5056#0" expanded="true" />
+            <element signature="e#5154#5155#0" expanded="true" />
+            <element signature="e#5238#5239#0" expanded="true" />
+            <element signature="e#5325#5326#0" expanded="true" />
+            <element signature="e#5407#5408#0" expanded="true" />
+            <element signature="e#5492#5493#0" expanded="true" />
+            <element signature="e#5574#5575#0" expanded="true" />
+            <element signature="e#5659#5660#0" expanded="true" />
+            <element signature="e#5739#5740#0" expanded="true" />
+            <element signature="e#5823#5824#0" expanded="true" />
+            <element signature="e#5901#5902#0" expanded="true" />
+            <element signature="e#5983#5984#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

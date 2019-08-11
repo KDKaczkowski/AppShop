@@ -27,7 +27,7 @@ class PrimitiveDBTest{
     void start() throws NoSuchAlgorithmException, AdditionFailed{
         admin = new Admin("Blazej", "bykowar", db);
         customer = new Customer("Kamil", "swieczka", 23, db);
-        good = new Goods("Dark bread", "Bakery", 34, 34.65, true);
+        good = new Goods("Dark bread", "Bakery", 12, 34.65, true);
         db.addNewGood( good );
         db.addNewGood(new Goods("White bread", "Bakery", 12, 2.50, true) );
         db.addNewGood(new Goods("Kaiser roll", "Bakery", 132, 12.50, true));
@@ -166,7 +166,31 @@ class PrimitiveDBTest{
 
 
     @Test
-    void addOrRemoveExistingGood() {
+    void addExistingGood() {
+        db.addOrRemoveExistingGood(good.getName(), 12);
+        assertEquals(24, good.getNumberOfGoods());
+    }
+
+    @Test
+    void RemoveExistingGood(){
+        db.addOrRemoveExistingGood(good.getName(), -6);
+        assertEquals(6, good.getNumberOfGoods());
+    }
+
+    @Test
+    void RemoveExistingGoodFailedTooMuchToRemove(){
+        db.addOrRemoveExistingGood(good.getName(), -13);
+        assertEquals(12, good.getNumberOfGoods());
+        /*AdditionFailed additionFailed = assertThrows(
+                AdditionFailed.class,
+                () -> db.addOrRemoveExistingGood(good.getName(), 12)
+        );*/
+    }
+
+    @Test
+    void FullyRemoveExistingGood(){
+        db.addOrRemoveExistingGood(good.getName(), -12);
+        assertEquals(0, good.getNumberOfGoods());
     }
 
     @Test
@@ -180,6 +204,20 @@ class PrimitiveDBTest{
         ObjectNotFound notFound = assertThrows(
                 ObjectNotFound.class,
                 () -> db.getGoodByNameAndType("Pieniadze z komunii", "Imaginacja")
+        );
+    }
+
+    @Test
+    void addNewGood() throws AdditionFailed, ObjectNotFound{
+        db.addNewGood(new Goods("Eggs", "Bakery", 12, 5.60, true));
+        assertEquals("Eggs", db.getGoodByName("Eggs").getName());
+    }
+
+    @Test
+    void canNotAddExistingGoodAsNew(){
+        AdditionFailed additionFailed = assertThrows(
+                AdditionFailed.class,
+                () -> db.addNewGood(new Goods("Dark bread", "Bakery", 12, 34.65, true))
         );
     }
 }
