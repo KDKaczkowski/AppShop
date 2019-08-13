@@ -2,11 +2,19 @@ package CommercialGoods;
 
 import Exceptions.AdditionFailed;
 
-public  class Goods { // TODO Goods.equals
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
+
+public  class Goods implements Products{
+    @NotBlank
     private String name;
+    @NotBlank
     private String type;
+    @NotEmpty
     private double numberOfGoods;
+    @NotEmpty
     private double price;
+    @NotEmpty
     private boolean pricePerUnit;
     public String getName() {
         return name;

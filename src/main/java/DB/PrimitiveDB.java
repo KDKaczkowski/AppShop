@@ -39,7 +39,7 @@ public class PrimitiveDB  implements DB{
 
     private ListMultimap<String, Goods> mapOfGoods= MultimapBuilder.hashKeys().arrayListValues().build();
 
-    private List<String> listOfBakeries = new ArrayList<String>();
+    /*private List<String> listOfBakeries = new ArrayList<String>(); // Probably useless
 
     private List<String> listOfCandies = new ArrayList<String>();
 
@@ -47,7 +47,7 @@ public class PrimitiveDB  implements DB{
 
     private List<String> listOfDrinks = new ArrayList<String>();
 
-    private List<String> listOfMeats = new ArrayList<String>();
+    private List<String> listOfMeats = new ArrayList<String>();*/
     ////////////////////////////////////////////////////////////
     public Admin getAdminByName(String name) throws ObjectNotFound {
         for(Admin admin: setOfAdmins){
@@ -176,7 +176,7 @@ public class PrimitiveDB  implements DB{
         this.setOfCustomers.add(customer);
     }
 
-    public List<String> getListOfBakeries() {
+    /*public List<String> getListOfBakeries() {
         return listOfBakeries;
     }
 
@@ -214,10 +214,10 @@ public class PrimitiveDB  implements DB{
 
     public void addMeat(String name) {
         this.listOfMeats.add(name);
-    }
+    }*/
 
     private void STARTER() throws AdditionFailed{
-        // BAKERY /////
+        /*// BAKERY /////
         this.addBakery("White bread");
         this.addBakery("Dark bread");
         this.addBakery("Sliced white bread");
@@ -260,7 +260,7 @@ public class PrimitiveDB  implements DB{
         this.addMeat("Parma ham");
         this.addMeat("Śląska gięta");
         this.addMeat("Normal Sausage");
-        this.addMeat("Roasted chicken");
+        this.addMeat("Roasted chicken");*/
 
         //////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////

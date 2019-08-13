@@ -5,9 +5,7 @@ import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
 import Users.Admin;
 import Users.Customer;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.*;
 
 import java.security.NoSuchAlgorithmException;
 import java.util.UUID;
@@ -34,6 +32,10 @@ class PrimitiveDBTest{
         db.addNewGood(new Goods("Lay's Paprika", "Candy", 122, 22.50, true));
 
 
+    }
+    @AfterEach
+    void clearChanges(){
+        good.setNumberOfGoods(12);
     }
 
     @Test

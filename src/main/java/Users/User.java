@@ -1,5 +1,6 @@
 package Users;
 
+import javax.validation.constraints.NotBlank;
 import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -7,7 +8,9 @@ import java.util.UUID;
 
 public abstract class User {
     private UUID id = UUID.randomUUID();
+    @NotBlank
     private String name;
+    @NotBlank
     private String password;
 
     public String getName() {
@@ -36,6 +39,13 @@ public abstract class User {
             this.password = "0" + this.password;
         }
 
+    }
+    public boolean equals(User user){
+        return ( this.getId().toString().equals( user.getId().toString() )
+                && this.getName().equals( user.getName() )
+                && this.getPassword().equals( user.getPassword())
+                && this.getClass() == user.getClass()
+        );
     }
     /*private void createCustomer(String name, String password, double cash, PrimitiveDB db){
         Customer customer = new Customer(db);

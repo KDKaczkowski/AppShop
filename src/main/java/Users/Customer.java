@@ -3,6 +3,7 @@ package Users;
 import DB.PrimitiveDB;
 import Exceptions.ObjectNotFound;
 
+import javax.validation.constraints.NotEmpty;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
@@ -12,6 +13,7 @@ import java.util.Scanner;
 public class Customer extends User {
     private Basket basket = new Basket();
     private List<Basket> historicalBaskets = new ArrayList<Basket>();
+    @NotEmpty
     private double cashOnAccount;
 
     public Basket getBasket() {
@@ -119,10 +121,5 @@ public class Customer extends User {
         this.basket.clearBasket();
     }
 
-    public boolean equals(Customer customer){
-        return ( this.getId().toString().equals( customer.getId().toString() )
-                && this.getName().equals( customer.getName() )
-                && this.getPassword().equals( customer.getPassword() )
-                );
-    }
+
 }

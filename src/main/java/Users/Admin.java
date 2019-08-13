@@ -8,14 +8,6 @@ import java.util.Scanner;
 
 public class Admin extends User {
 
-    public boolean equals(Admin admin) {
-        return ( this.getName().equals( admin.getName() )
-                && this.getPassword().equals( admin.getPassword() )
-                && this.getId().toString().equals( admin.getId().toString() )
-                && this.getClass() == admin.getClass()
-        );
-
-    }
 
     public Admin(String name, String password, PrimitiveDB db) throws NoSuchAlgorithmException {
         try {
