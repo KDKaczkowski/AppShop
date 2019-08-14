@@ -1,16 +1,18 @@
 import CommercialGoods.Goods;
+import Controller.Controller;
 import DB.PrimitiveDB;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
 import Users.Admin;
 import Users.Customer;
 
+import java.security.NoSuchAlgorithmException;
 import java.util.Map;
 
 public class Main {
-    public static void main(String[] args) throws AdditionFailed, ObjectNotFound {
+    public static void main(String[] args) throws AdditionFailed, ObjectNotFound, NoSuchAlgorithmException {
         PrimitiveDB db = new PrimitiveDB(false);
-
+        Controller controller = new Controller(db);
 
         for( Map.Entry<String, Goods> entry : db.getMapOfGoods().entries()){
             String key= entry.getKey();
@@ -39,7 +41,7 @@ public class Main {
         for(Goods element : db.getGoodsOfType("Candy")){
             System.out.println(element.getName());
         }
-
+        controller.login();
 
     }
 }

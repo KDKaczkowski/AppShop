@@ -12,6 +12,7 @@ public class Admin extends User {
     public Admin(String name, String password, PrimitiveDB db) throws NoSuchAlgorithmException {
         try {
             db.getAdminByName(name);
+            db.getCustomerByName(name);
         }
         catch (ObjectNotFound o){
             this.setName(name);
@@ -20,9 +21,12 @@ public class Admin extends User {
             } catch(NoSuchAlgorithmException e){ }
             db.addAdmin(this);
         }
+        System.out.println("Name already taken");
 
 
+    }
 
+    public Admin() {
     }
 
     public Admin(PrimitiveDB db) throws ObjectNotFound, NoSuchAlgorithmException {
@@ -36,7 +40,7 @@ public class Admin extends User {
                 db.getCustomerByName(name);
                 db.getAdminByName(name);
             } catch (ObjectNotFound objectNotFound) {
-                if (name.isEmpty() || name.equals(" ")) {
+                if (name.isBlank()) {
                     System.out.println("Wrong name! Try again");
                     continue;
                 }
@@ -44,7 +48,7 @@ public class Admin extends User {
                 //PASSWORD
                 System.out.println("Enter password of admin");
                 String password = input.nextLine();
-                if (password.isEmpty() || password.equals(" ")) {
+                if (password.isBlank()) {
                     System.out.println("Wrong password! Try again");
                     continue;
                 }

@@ -45,9 +45,9 @@ public class Customer extends User {
         }
         catch(ObjectNotFound objectNotFound){
 
-            if (name.isEmpty() || name.equals(" "))
+            if (name.isBlank())
                 return;
-            if (password.isEmpty() || password.equals(" "))
+            if (password.isBlank())
                 return;
             if(cash < 0)
                 return;
@@ -75,7 +75,7 @@ public class Customer extends User {
                 db.getCustomerByName(name);
                 db.getAdminByName(name);
             } catch (ObjectNotFound objectNotFound) {
-                if (name.isEmpty() || name.equals(" ")) {
+                if (name.isBlank()) {
                     System.out.println("Wrong name! Try again");
                     continue;
                 }
@@ -83,7 +83,7 @@ public class Customer extends User {
                 //PASSWORD
                 System.out.println("Enter password of customer");
                 String password = input.nextLine();
-                if (password.isEmpty() || password.equals(" ")) {
+                if (password.isBlank()) {
                     System.out.println("Wrong password! Try again");
                     continue;
                 }

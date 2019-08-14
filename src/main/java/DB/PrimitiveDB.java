@@ -319,6 +319,7 @@ public class PrimitiveDB  implements DB{
             Customer customer3 = new Customer("Andrew", "Duda", 20,  this);
 
         }catch(NoSuchAlgorithmException e){        }
+        //catch(ObjectNotFound notFound){}
 
 
 

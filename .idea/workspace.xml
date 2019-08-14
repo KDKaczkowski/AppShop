@@ -2,24 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5f046c-8098-42a8-82ff-0272fc802407" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/Starter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Users/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/CommercialGoods/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommercialGoods/Goods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/Starter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/CommercialGoods/Products.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommercialGoods/Products.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/DB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/AdditionFailed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/AdditionFailed.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/AppShop.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Users/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Admin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Users/Basket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Basket.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Customer.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/User.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/test-classes/DB/PrimitiveDBTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DB/PrimitiveDBTest.class" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,140 +38,6 @@
   <component name="ErrorTreeViewConfiguration">
     <option name="autoscrollToSource" value="true" />
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#656#657#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#4780#4781#0" expanded="true" />
-                <element signature="e#4813#4814#0" expanded="true" />
-                <element signature="e#4856#4857#0" expanded="true" />
-                <element signature="e#4890#4891#0" expanded="true" />
-                <element signature="e#4931#4932#0" expanded="true" />
-                <element signature="e#4974#4975#0" expanded="true" />
-                <element signature="e#5022#5023#0" expanded="true" />
-                <element signature="e#5059#5060#0" expanded="true" />
-                <element signature="e#5109#5110#0" expanded="true" />
-                <element signature="e#5158#5159#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#333#334#0" expanded="true" />
-                <element signature="e#373#374#0" expanded="true" />
-                <element signature="e#405#406#0" expanded="true" />
-                <element signature="e#440#441#0" expanded="true" />
-                <element signature="e#471#472#0" expanded="true" />
-                <element signature="e#498#499#0" expanded="true" />
-                <element signature="e#523#524#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Basket.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-                <element signature="e#397#398#0" expanded="true" />
-                <element signature="method#Basket#0;class#Basket#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
-              <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1103#1104#0" expanded="true" />
-                <element signature="e#1142#1143#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/AdditionFailed.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" selection-start-line="9" selection-end-line="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -188,27 +57,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/DB/Starter.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/Types.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/Basket.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/DB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CommercialGoods/Products.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/Admin.java" />
-        <option value="$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Users/Customer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" />
-        <option value="$PROJECT_DIR$/src/main/java/DB/DatabaseValidator.java" />
-      </list>
-    </option>
-  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -222,99 +70,9 @@
     <option name="width" value="1853" />
     <option name="height" value="1055" />
   </component>
+  <component name="ProjectId" id="1PPDqoWDxpBkreZl9clmkwWNQaZ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="CommercialGoods" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Users" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ShopApp" type="b2602c69:ProjectViewProjectNode" />
-              <item name="AppShop" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="DB" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -355,7 +113,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PrimitiveDBTest">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AppShop" />
@@ -428,8 +186,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PrimitiveDBTest" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.PrimitiveDBTest" />
         <item itemvalue="JUnit.PrimitiveDBTest.FullyRemoveExistingGood" />
         <item itemvalue="JUnit.PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" />
         <item itemvalue="JUnit.PrimitiveDBTest.RemoveExistingGood" />
@@ -459,6 +217,7 @@
       <workItem from="1565374102238" duration="975000" />
       <workItem from="1565519592571" duration="4866000" />
       <workItem from="1565697096510" duration="4339000" />
+      <workItem from="1565767042306" duration="9476000" />
     </task>
     <servers />
   </component>
@@ -494,9 +253,6 @@
       <configuration name="PrimitiveDBTest" configurationId="JUnit" />
     </history-entry>
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56579000" />
-  </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
@@ -506,255 +262,24 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="57" y="25" width="1863" height="1055" extended-state="6" />
-    <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1601541" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.23196448" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32963374" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32913387" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32741398" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32890365" />
-      <window_info anchor="right" id="Bean Validation" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32982844" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.1449917" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.23196448" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955604" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32890365" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32741398" />
-      <window_info active="true" anchor="bottom" id="Inspection Results" order="13" visible="true" weight="0.32890365" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="right" id="Maven" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="7" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32982844" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/ShopApp$PrimitiveDBTest_getGoodByName.ic" NAME="PrimitiveDBTest.getGoodByName Coverage Results" MODIFIED="1564478148452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>DB.*</FILTER>
     </SUITE>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/target/test-classes/DB/PrimitiveDBTest.class">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.5.1/junit-jupiter-api-5.5.1.jar!/org/junit/jupiter/api/function/Executable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Types.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/Starter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="20" column="38" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Products.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="18" selection-start-line="3" selection-start-column="18" selection-end-line="3" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/AdditionFailed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Basket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="18" column="27" selection-start-line="18" selection-start-column="27" selection-end-line="18" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-            <element signature="e#397#398#0" expanded="true" />
-            <element signature="method#Basket#0;class#Basket#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="445">
-          <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#333#334#0" expanded="true" />
-            <element signature="e#373#374#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#440#441#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#498#499#0" expanded="true" />
-            <element signature="e#523#524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Customer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Users/Admin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="50" selection-start-line="34" selection-start-column="50" selection-end-line="34" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DB/PrimitiveDBTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1103#1104#0" expanded="true" />
-            <element signature="e#1142#1143#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/DatabaseValidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#656#657#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#4780#4781#0" expanded="true" />
-            <element signature="e#4813#4814#0" expanded="true" />
-            <element signature="e#4856#4857#0" expanded="true" />
-            <element signature="e#4890#4891#0" expanded="true" />
-            <element signature="e#4931#4932#0" expanded="true" />
-            <element signature="e#4974#4975#0" expanded="true" />
-            <element signature="e#5022#5023#0" expanded="true" />
-            <element signature="e#5059#5060#0" expanded="true" />
-            <element signature="e#5109#5110#0" expanded="true" />
-            <element signature="e#5158#5159#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
   <component name="masterDetails">
     <states>
