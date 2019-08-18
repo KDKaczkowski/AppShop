@@ -9,7 +9,7 @@ import Users.Customer;
 import java.security.NoSuchAlgorithmException;
 import java.util.Scanner;
 
-public class Controller {
+public class Controller implements Control{
     private PrimitiveDB db;
     private String loggedName;
     private boolean adminLogged;
