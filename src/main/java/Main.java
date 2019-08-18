@@ -7,19 +7,14 @@ import Users.Admin;
 import Users.Customer;
 
 import java.security.NoSuchAlgorithmException;
-import java.util.Map;
 
 public class Main {
     public static void main(String[] args) throws AdditionFailed, ObjectNotFound, NoSuchAlgorithmException {
         PrimitiveDB db = new PrimitiveDB(false);
         Controller controller = new Controller(db);
 
-        for( Map.Entry<String, Goods> entry : db.getMapOfGoods().entries()){
-            String key= entry.getKey();
-            Goods value = entry.getValue();
-            System.out.println("KLUCZ: " + key + " WARTOSC: " + value.getName() + "  TYP: "+ value.getType());
-        }
-
+        db.printAllProducts();
+        Customer customer = new Customer("Kamil", "yafud", 540, db);
         for(Goods element : db.getGoodsOfType("Bakery")){
             System.out.println(element.getName());
         }
@@ -41,7 +36,11 @@ public class Main {
         for(Goods element : db.getGoodsOfType("Candy")){
             System.out.println(element.getName());
         }
-        controller.login();
+        //db.getCustomerByName("Jack") = customer; TODO Something like that, is it worth to do that or every time db.getgoood etc
+
+        for(Customer el : db.getSetOfCustomers()){
+            System.out.println("   Name" + el.getName());
+        }
 
     }
 }

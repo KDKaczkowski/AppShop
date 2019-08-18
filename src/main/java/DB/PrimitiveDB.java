@@ -156,6 +156,46 @@ public class PrimitiveDB  implements DB{
         throw new ObjectNotFound();
     }
 
+    @Override
+    public void printAllProducts() {
+        for( Map.Entry<String, Goods> entry : mapOfGoods.entries()){
+            String key= entry.getKey();
+            Goods value = entry.getValue();
+            System.out.println("Type: " + key + " Name: " + value.getName() + "  Price: "+ value.getPrice() + " Number of Products: " + value.getNumberOfGoods());
+        }
+    }
+
+    @Override
+    public void printAllProductsOfType(String type) {
+        try{
+            for(Goods element : getGoodsOfType( type )){
+                System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() );
+            }
+        } catch (ObjectNotFound notFound){
+            System.out.println("Can not find this type of products");
+        }
+
+    }
+
+    @Override
+    public void printSpecificProduct(String name){
+        try {
+            Goods element = getGoodByName(name);
+            System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() );
+        } catch (ObjectNotFound notFound){
+            System.out.println("Can not find this product");
+        }
+    }
+
+    @Override
+    public void printSpecificProduct(String name, String type){
+        try {
+            Goods element = getGoodByNameAndType(name, type);
+            System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() );
+        } catch (ObjectNotFound notFound){
+            System.out.println("Can not find this product");
+        }
+    }
     public ListMultimap<String, Goods> getMapOfGoods() {
         return mapOfGoods;
     }

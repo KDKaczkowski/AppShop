@@ -21,4 +21,8 @@ public interface DB {
     public void addNewGood(Goods goods) throws AdditionFailed; //
     public void addOrRemoveExistingGood(String name, double amount) throws AdditionFailed;// Sprawdz czy trzeba
     public Goods getGoodByNameAndType(String name, String type) throws ObjectNotFound;
+    public void printAllProducts();
+    public void printAllProductsOfType(String type);
+    public void printSpecificProduct(String name);
+    public void printSpecificProduct(String name, String type);
 }

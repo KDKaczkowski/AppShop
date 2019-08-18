@@ -10,7 +10,7 @@ import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 
-public class Customer extends User {
+public class Customer extends User { //TODO How about private
     private Basket basket = new Basket();
     private List<Basket> historicalBaskets = new ArrayList<Basket>();
     @NotEmpty

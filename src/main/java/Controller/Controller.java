@@ -56,8 +56,6 @@ public class Controller {
             catch (ObjectNotFound notFound1){
                 System.out.println("Invalid data can not login.");
             }
-        } finally {
-            input.close();
         }
     }
 
@@ -80,7 +78,7 @@ public class Controller {
         loggedName = null;
         System.out.println("Logged out successfully");
     }
-    public void addAdmin() throws NoSuchAlgorithmException{
+    public void registerAdmin() throws NoSuchAlgorithmException{
         if (adminLogged){
             Scanner input = new Scanner(System.in);
             String name;
@@ -104,7 +102,7 @@ public class Controller {
             System.out.println("You can not add admin as Customer");
         }
     }
-    public void RegisterCustomer(){
+    public void registerCustomer(){
         Scanner input = new Scanner(System.in);
         String name;
         String password;
@@ -130,5 +128,71 @@ public class Controller {
 
         }
         new Customer(name, password, cash, db);
+    }
+    public void chooseProductToBuyFromAll(){
+        if(logged && !adminLogged){
+            Scanner input = new Scanner(System.in);
+            System.out.println("------Choose a product to buy from the list below------");
+            db.printAllProducts();
+            System.out.println("Enter name of product that you want buy or click enter if you did not want to buy anything: ");
+            String temp = input.nextLine();
+            if(temp.isEmpty())
+                return;
+            try{
+                buyProduct( temp );
+            } catch (ObjectNotFound notFound){
+                System.out.println("You typed wrong name of product. Buying failed");
+            }
+        }
+
+    }
+    public void chooseProductToBuyFromType(String type){
+        if(logged && !adminLogged){
+            Scanner input = new Scanner(System.in);
+            System.out.println("------Choose a product to buy from the list below------");
+            db.printAllProductsOfType(type);
+            System.out.println("Enter name of product that you want buy or click enter if you did not want to buy anything: ");
+            String temp = input.nextLine();
+            if(temp.isEmpty())
+                return;
+            try{
+                buyProduct( temp );
+            } catch (ObjectNotFound notFound){
+                System.out.println("You typed wrong name of product. Buying failed");
+            }
+        }
+    }
+    public void buyProduct(String name) throws ObjectNotFound{
+        if(db.getGoodByName( name ).getNumberOfGoods() > 0){
+            double howManyGoods;
+            Scanner input = new Scanner(System.in);
+            System.out.println("-----" + name +" informations-----");
+            db.printSpecificProduct(name);
+            System.out.println("Enter how many " + name + " you want to buy");
+            howManyGoods = input.nextDouble();
+
+            if( howManyGoods > db.getGoodByName( name ).getNumberOfGoods()){
+                System.out.println("You can not buy that much products");
+                System.out.println("Try again with less products (You can type 0 if you dont want to buy anything)");
+                buyProduct( name );
+            }
+            else if (howManyGoods * db.getGoodByName( name ).getPrice() > db.getCustomerByName( loggedName ).getCashOnAccount() ){
+                System.out.println("You do not have enough money to buy that much products");
+                System.out.println("Try again with less products (You can type 0 if you dont want to buy anything)");
+                buyProduct( name );
+            }
+            else{
+                db.getCustomerByName( loggedName ).setCashOnAccount(
+                        db.getCustomerByName( loggedName ).getCashOnAccount() - howManyGoods * db.getGoodByName( name ). getPrice()
+                );
+                db.addOrRemoveExistingGood(name, -howManyGoods);
+                db.getCustomerByName( loggedName ).getBasket().addGoodToBasket(
+                        db.getGoodByName( name )
+                );
+            }
+        }
+        else{
+            System.out.println("We are sorry, but we ran out of this product. ");
+        }
     }
 }

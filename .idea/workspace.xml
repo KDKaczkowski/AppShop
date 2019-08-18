@@ -2,26 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d5f046c-8098-42a8-82ff-0272fc802407" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommercialGoods/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommercialGoods/Goods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommercialGoods/Products.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommercialGoods/Products.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Controller.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DB/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/DB.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/AdditionFailed.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/AdditionFailed.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/AppShop.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Users/Admin.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Admin.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Users/Basket.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Basket.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Users/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/DB/PrimitiveDBTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/DB/PrimitiveDBTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +104,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AppShop" />
       <method v="2">
@@ -186,7 +176,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.PrimitiveDBTest" />
         <item itemvalue="JUnit.PrimitiveDBTest.FullyRemoveExistingGood" />
         <item itemvalue="JUnit.PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" />
@@ -218,6 +207,9 @@
       <workItem from="1565519592571" duration="4866000" />
       <workItem from="1565697096510" duration="4339000" />
       <workItem from="1565767042306" duration="9476000" />
+      <workItem from="1565866562273" duration="912000" />
+      <workItem from="1566123580210" duration="4898000" />
+      <workItem from="1566129005573" duration="1149000" />
     </task>
     <servers />
   </component>
@@ -270,7 +262,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
