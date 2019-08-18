@@ -36,6 +36,14 @@ public class Customer extends User { //TODO How about private
         return cashOnAccount;
     }
 
+    public void valuesFromTemporaryObject(Customer customer){
+        if(this.getName().equals( customer.getName() ) ) {
+            this.setCashOnAccount(customer.getCashOnAccount());
+            this.setBasket( customer.getBasket() );
+            this.setHistoricalBaskets( customer.getHistoricalBaskets() );
+        }
+    }
+
     public void setCashOnAccount(double cashOnAccount) {
         this.cashOnAccount = cashOnAccount;
     }

@@ -72,4 +72,5 @@ public  class Goods implements Products{
                 && price == good.price
         );
     }
+
 }

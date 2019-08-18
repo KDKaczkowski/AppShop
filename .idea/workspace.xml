@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2d5f046c-8098-42a8-82ff-0272fc802407" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/DB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/DB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/DB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/DB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Customer.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,10 +27,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -85,6 +80,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="Controller" />
       <recent name="DB" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -103,7 +99,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.ControllerTest">
     <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="AppShop" />
@@ -111,64 +107,80 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DB.*" />
+          <option name="PATTERN" value="Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DB" />
-      <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.FullyRemoveExistingGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.logOutAdminFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DB.*" />
+          <option name="PATTERN" value="Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DB" />
-      <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="FullyRemoveExistingGood" />
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
+      <option name="METHOD_NAME" value="logOutAdminFailed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.RemoveExistingGood" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.logoutAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DB.*" />
+          <option name="PATTERN" value="Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DB" />
-      <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="RemoveExistingGood" />
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
+      <option name="METHOD_NAME" value="logoutAdmin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.logoutCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="DB.*" />
+          <option name="PATTERN" value="Controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="DB" />
-      <option name="MAIN_CLASS_NAME" value="DB.PrimitiveDBTest" />
-      <option name="METHOD_NAME" value="RemoveExistingGoodFailedTooMuchToRemove" />
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
+      <option name="METHOD_NAME" value="logoutCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ControllerTest.logoutCustomerFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AppShop" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Controller" />
+      <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
+      <option name="METHOD_NAME" value="logoutCustomerFailed" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -176,10 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PrimitiveDBTest" />
-        <item itemvalue="JUnit.PrimitiveDBTest.FullyRemoveExistingGood" />
-        <item itemvalue="JUnit.PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" />
-        <item itemvalue="JUnit.PrimitiveDBTest.RemoveExistingGood" />
+        <item itemvalue="JUnit.ControllerTest" />
+        <item itemvalue="JUnit.ControllerTest.logOutAdminFailed" />
+        <item itemvalue="JUnit.ControllerTest.logoutCustomerFailed" />
+        <item itemvalue="JUnit.ControllerTest.logoutCustomer" />
+        <item itemvalue="JUnit.ControllerTest.logoutAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -210,40 +223,9 @@
       <workItem from="1565866562273" duration="912000" />
       <workItem from="1566123580210" duration="4898000" />
       <workItem from="1566129005573" duration="1149000" />
+      <workItem from="1566152237962" duration="5954000" />
     </task>
     <servers />
-  </component>
-  <component name="TestHistory">
-    <history-entry file="PrimitiveDBTest_canNotAddExistingGoodAsNew - 2019.08.11 at 13h 25m 09s.xml">
-      <configuration name="PrimitiveDBTest.canNotAddExistingGoodAsNew" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest - 2019.08.13 at 13h 58m 15s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest - 2019.08.13 at 13h 59m 49s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_addExistingGood - 2019.08.13 at 14h 00m 38s.xml">
-      <configuration name="PrimitiveDBTest.addExistingGood" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_FullyRemoveExistingGood - 2019.08.13 at 14h 00m 45s.xml">
-      <configuration name="PrimitiveDBTest.FullyRemoveExistingGood" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_RemoveExistingGood - 2019.08.13 at 14h 01m 04s.xml">
-      <configuration name="PrimitiveDBTest.RemoveExistingGood" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_RemoveExistingGoodFailedTooMuchToRemove - 2019.08.13 at 14h 01m 13s.xml">
-      <configuration name="PrimitiveDBTest.RemoveExistingGoodFailedTooMuchToRemove" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest_FullyRemoveExistingGood - 2019.08.13 at 14h 01m 18s.xml">
-      <configuration name="PrimitiveDBTest.FullyRemoveExistingGood" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest - 2019.08.13 at 14h 04m 16s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PrimitiveDBTest - 2019.08.13 at 15h 19m 09s.xml">
-      <configuration name="PrimitiveDBTest" configurationId="JUnit" />
-    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">

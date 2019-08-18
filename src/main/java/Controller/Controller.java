@@ -1,5 +1,6 @@
 package Controller;
 
+import CommercialGoods.Goods;
 import DB.PrimitiveDB;
 import Exceptions.ObjectNotFound;
 import Users.Admin;
@@ -13,29 +14,82 @@ public class Controller {
     private String loggedName;
     private boolean adminLogged;
     private boolean logged;
+
+    public String getLoggedName() {
+        return loggedName;
+    }
+
+    public void setLoggedName(String loggedName) {
+        this.loggedName = loggedName;
+    }
+
+    public boolean isAdminLogged() {
+        return adminLogged;
+    }
+
+    public void setAdminLogged(boolean adminLogged) {
+        this.adminLogged = adminLogged;
+    }
+
+    public boolean isLogged() {
+        return logged;
+    }
+
+    public void setLogged(boolean logged) {
+        this.logged = logged;
+    }
+
     public Controller(PrimitiveDB db) {
         this.db = db;
         logged = false;
         adminLogged = false;
     }
-    public void login() throws NoSuchAlgorithmException {
+    public void getLoginValues() throws NoSuchAlgorithmException {
+        if(!logged) {
+            String name;
+            String password;
+            Scanner input = new Scanner(System.in);
+            String temporary;
+
+            System.out.println("Enter name to login (Or press enter to exit):");
+            name = input.nextLine();
+            if ( name.isEmpty() ) {
+                return;
+            }
+            while (name.isBlank()) {
+                System.out.println("Invalid data - name can not be only spaces. Try again. You can press enter if you want to quit. In other case enter anything");
+
+                temporary = input.nextLine();
+                if (temporary.isEmpty())
+                    return;
+                else
+                    name = input.nextLine();
+            }
+
+            System.out.println("Enter password to login (Or press enter to exit):");
+            password = input.nextLine();
+            if (password.isEmpty())
+                return;
+            while (password.isBlank()) {
+                System.out.println("Invalid data - password can not be only spaces. Try again. You can press enter if you want to quit. In other case enter anything");
+                temporary = input.nextLine();
+                if (temporary.isEmpty())
+                    return;
+                else
+                    password = input.nextLine();
+            }
+            this.login(name, password);
+        }
+        else{
+            System.out.println("You are already logged in. If that is not you, than log out first");
+        }
+    }
+    public void login(String name, String password) throws NoSuchAlgorithmException {
         Admin temp = new Admin();
-        Scanner input = new Scanner(System.in);
-        System.out.println("Enter name to login:");
-        temp.setName( input.nextLine() );
-        while (temp.getName().isBlank()){
-            System.out.println("Invalid data - name is empty or it is only space. Try again.");
-            temp.setName( input.nextLine() );
-        }
-        System.out.println("Enter password:");
-        temp.setPassword( input.nextLine() );
-        while(temp.getPassword().isBlank() ){
-            System.out.println("Invalid data - password is empty or it is only space. Try again.");
-            temp.setPassword( input.nextLine() );
-        }
+        temp.setPassword( password );
         try {
-            if (db.getAdminByName( temp.getName() ).getPassword().equals( temp.getPassword() )) {
-                loggedName = temp.getName() ;
+            if (db.getAdminByName( name ).getPassword().equals( temp.getPassword() )) {
+                loggedName = name ;
                 adminLogged = true;
                 logged = true;
                 System.out.println("Logged successfully");
@@ -44,39 +98,64 @@ public class Controller {
                 throw new ObjectNotFound();
         }  catch (ObjectNotFound notFound){
             try{
-                if(db.getCustomerByName( temp.getName() ).getPassword().equals( temp.getPassword() )){
-                    loggedName = temp.getName();
+                if(db.getCustomerByName( name ).getPassword().equals( temp.getPassword() )){
+                    loggedName = name;
                     adminLogged = false;
                     logged = true;
                     System.out.println("Logged successfully");
                 }
                 else
                     throw new ObjectNotFound();
-            }
-            catch (ObjectNotFound notFound1){
+            } catch (ObjectNotFound notFound1){
                 System.out.println("Invalid data can not login.");
             }
         }
     }
-
-    public void logout()throws NoSuchAlgorithmException{
-        Admin temp = new Admin();
-        String temporary;
-        Scanner input = new Scanner( System.in );
-        System.out.println("Enter Password to logout:");
-        temp.setPassword( input.nextLine() );
-        while( temp.getPassword().isBlank() ){
-            System.out.println("Invalid password, can not logout. If you want to try again press enter, in other case enter anything:");
-            temporary = input.nextLine();
-            if(temporary.isEmpty())
-                temp.setPassword( input.nextLine() );
-            else
-                return;
+    public void getLogoutValues() throws NoSuchAlgorithmException, ObjectNotFound {
+        if(logged){
+            String password;
+            String temporary;
+            Scanner input = new Scanner( System.in );
+            System.out.println("Enter Password to log out:");
+            password = input.nextLine();
+            while( password.isBlank() ) {
+                System.out.println("Invalid password, can not log out. Try again. You can press enter if you want to quit. In other case enter anything");
+                temporary = input.nextLine();
+                if (temporary.isEmpty())
+                    return;
+                else
+                    password = input.nextLine();
+            }
+            this.logout( password );
         }
-        logged = false;
-        adminLogged = false;
-        loggedName = null;
-        System.out.println("Logged out successfully");
+        System.out.println("Nobody is logged. Can not log out");
+    }
+    public void logout(String password) throws ObjectNotFound, NoSuchAlgorithmException {
+        Admin temp = new Admin();
+        temp.setPassword( password );
+        if(adminLogged){
+            if( temp.getPassword().equals( db.getAdminByName( loggedName ).getPassword() ) ){
+                adminLogged = false;
+                logged = false;
+                loggedName = null;
+                System.out.println("Logged out successfully");
+            }
+            else {
+                System.out.println("Wrong password, can not log out.");
+            }
+        }
+        else{
+            if( temp.getPassword().equals( db.getCustomerByName( loggedName ).getPassword() )){
+                logged = false;
+                loggedName = null;
+                System.out.println("Logged out successfully");
+            }
+            else {
+                System.out.println("Wrong password, can not log out.");
+            }
+        }
+
+
     }
     public void registerAdmin() throws NoSuchAlgorithmException{
         if (adminLogged){
@@ -163,27 +242,32 @@ public class Controller {
         }
     }
     public void buyProduct(String name) throws ObjectNotFound{
-        if(db.getGoodByName( name ).getNumberOfGoods() > 0){
-            double howManyGoods;
+
+        Goods tempGood = db.getGoodByName( name );
+        Customer tempCustomer = db.getCustomerByName( loggedName );
+        double howManyGoods;
+
+        if(tempGood.getNumberOfGoods() > 0){
+
             Scanner input = new Scanner(System.in);
             System.out.println("-----" + name +" informations-----");
             db.printSpecificProduct(name);
             System.out.println("Enter how many " + name + " you want to buy");
             howManyGoods = input.nextDouble();
 
-            if( howManyGoods > db.getGoodByName( name ).getNumberOfGoods()){
+            if( howManyGoods > tempGood.getNumberOfGoods()){
                 System.out.println("You can not buy that much products");
                 System.out.println("Try again with less products (You can type 0 if you dont want to buy anything)");
                 buyProduct( name );
             }
-            else if (howManyGoods * db.getGoodByName( name ).getPrice() > db.getCustomerByName( loggedName ).getCashOnAccount() ){
+            else if (howManyGoods * tempGood.getPrice() > tempCustomer.getCashOnAccount() ){
                 System.out.println("You do not have enough money to buy that much products");
                 System.out.println("Try again with less products (You can type 0 if you dont want to buy anything)");
                 buyProduct( name );
             }
             else{
                 db.getCustomerByName( loggedName ).setCashOnAccount(
-                        db.getCustomerByName( loggedName ).getCashOnAccount() - howManyGoods * db.getGoodByName( name ). getPrice()
+                        tempCustomer.getCashOnAccount() - howManyGoods * tempGood.getPrice()
                 );
                 db.addOrRemoveExistingGood(name, -howManyGoods);
                 db.getCustomerByName( loggedName ).getBasket().addGoodToBasket(
