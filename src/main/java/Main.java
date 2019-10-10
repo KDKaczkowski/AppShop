@@ -36,7 +36,7 @@ public class Main {
         for(Goods element : db.getGoodsOfType("Candy")){
             System.out.println(element.getName());
         }
-        //db.getCustomerByName("Jack") = customer; TODO Something like that, is it worth to do that or every time db.getgoood etc
+
 
         for(Customer el : db.getSetOfCustomers()){
             System.out.println("   Name" + el.getName());

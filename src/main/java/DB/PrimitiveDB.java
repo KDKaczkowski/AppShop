@@ -95,7 +95,7 @@ public class PrimitiveDB  implements DB{
     }
 
 
-    public void setGood(Goods good) throws AdditionFailed{
+    /*public void setGood(Goods good) throws AdditionFailed{
         if(good.getName() == null
                 || !inTYPES( good.getType() )
                 || good.getPrice() <= 0
@@ -103,8 +103,11 @@ public class PrimitiveDB  implements DB{
         ){
             throw new AdditionFailed();
         }
+        else{
 
-    }
+        }
+
+    }*/
     public Goods getGoodByName(String name) throws ObjectNotFound {
         for(Goods value: mapOfGoods.values()) {
             if (value.getName().equals(name)){
@@ -172,7 +175,7 @@ public class PrimitiveDB  implements DB{
         for( Map.Entry<String, Goods> entry : mapOfGoods.entries()){
             String key= entry.getKey();
             Goods value = entry.getValue();
-            System.out.println("Type: " + key + " Name: " + value.getName() + "  Price: "+ value.getPrice() + " Number of Products: " + value.getNumberOfGoods());
+            System.out.println("Type: " + key + " Name: " + value.getName() + "  Price: "+ value.getPrice() + " Number of Products: " + value.getNumberOfGoods() + "Price per unit: " + value.isPricePerUnit());
         }
     }
 
@@ -180,7 +183,7 @@ public class PrimitiveDB  implements DB{
     public void printAllProductsOfType(String type) {
         try{
             for(Goods element : getGoodsOfType( type )){
-                System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() );
+                System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() + "Price per unit: " + element.isPricePerUnit());
             }
         } catch (ObjectNotFound notFound){
             System.out.println("Can not find this type of products");
@@ -192,7 +195,11 @@ public class PrimitiveDB  implements DB{
     public void printSpecificProduct(String name){
         try {
             Goods element = getGoodByName(name);
-            System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() );
+            System.out.println("1. Type: " + element.getType() );
+            System.out.println("2. Name: " + element.getName() );
+            System.out.println("3. Price: "+ element.getPrice() );
+            System.out.println("4. Number of Products: " + element.getNumberOfGoods());
+            System.out.println("5. Price per unit: " + element.isPricePerUnit());
         } catch (ObjectNotFound notFound){
             System.out.println("Can not find this product");
         }
@@ -202,7 +209,11 @@ public class PrimitiveDB  implements DB{
     public void printSpecificProduct(String name, String type){
         try {
             Goods element = getGoodByNameAndType(name, type);
-            System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() );
+            System.out.println("1. Type: " + element.getType() );
+            System.out.println("2. Name: " + element.getName() );
+            System.out.println("3. Price: "+ element.getPrice() );
+            System.out.println("4. Number of Products: " + element.getNumberOfGoods());
+            System.out.println("5. Price per unit: " + element.isPricePerUnit());
         } catch (ObjectNotFound notFound){
             System.out.println("Can not find this product");
         }

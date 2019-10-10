@@ -55,7 +55,7 @@ public  class Goods implements Products{
     public void setPricePerUnit(boolean pricePerUnit) {
         this.pricePerUnit = pricePerUnit;
     }
-
+    public Goods(){ }
     public Goods(String name, String type, double numberOfGoods, double price, boolean pricePerUnit) throws AdditionFailed {
         if(price <= 0 || numberOfGoods < 0 || name.isEmpty() || name.equals(" "))
             throw new AdditionFailed();

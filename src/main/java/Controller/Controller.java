@@ -351,20 +351,89 @@ public class Controller implements Control{
     public void addExistingProduct(String name, double numberOfGoods){
             db.addOrRemoveExistingGood(name, numberOfGoods);
     }
-    public void getChangeProductValues(){
+    public void getChangeProductValues() throws ObjectNotFound{
+        Goods temp = new Goods();
         Scanner input = new Scanner(System.in);
+        int tempInt;
+        double tempDouble;
+        String text;
         System.out.println("Enter name of product that you want to change");
         db.printAllProducts();
         String name = input.nextLine();
         try{
-            Goods temp = db.getGoodByName(name);
+            temp = db.getGoodByName(name);
         } catch(ObjectNotFound notFound){
             System.out.println("Product not found. Back to the MENU");
+            return;
         }
-        System.out.println("If you want to change value, enter new name or number. In other case press enter");
-        System.out.println("Current name: " + db.ge);
+        while(true) {
+            System.out.println("Enter which value you want to change. If you want to save all changes enter 0");
+            db.printSpecificProduct(temp.getName(), temp.getType());
+            tempInt = input.nextInt();
+            while( tempInt < 0 || tempInt > 5){
+                System.out.println("Use value between 0-5");
+                tempInt= input.nextInt();
+            }
+            switch (tempInt){
+                case 0:
+                    changeProduct( db.getGoodByName(name), temp.getName(), temp.getType(), temp.getNumberOfGoods(), temp.getPrice(), temp.isPricePerUnit() );
+                    return;
+                case 1:
+                    System.out.println("Current name: " + temp.getName());
+                    System.out.println("New name:");
+                    text = input.nextLine();
+                    while( text.isBlank() ){
+                        System.out.println("Name have to be text. Not only spaces or nothing. Try again");
+                        text = input.nextLine();
+                    }
+                    temp.setName( text );
+                case 2:
+                    System.out.println("Current type: " + temp.getType());
+                    System.out.println("New type:");
+                    text = input.nextLine();
+                    while( text.isBlank() ){
+                        System.out.println("Type have to be text. Not only spaces or nothing. Try again");
+                        text = input.nextLine();
+                    }
+                    temp.setType( text );
+                case 3:
+                    System.out.println("Current number of goods: " + temp.getNumberOfGoods());
+                    System.out.println("New number of goods:");
+                    tempDouble = input.nextDouble();
+                    while( tempDouble < 0 ){
+                        System.out.println("Number of goods have to be greater or at least equal to 0. Try again");
+                        tempDouble = input.nextDouble();
+                    }
+                    temp.setNumberOfGoods( tempDouble );
+                case 4:
+                    System.out.println("Current price: " + temp.getPrice());
+                    System.out.println("New price:");
+                    tempDouble = input.nextDouble();
+                    while( tempDouble < 0 ){
+                        System.out.println("Price have to be greater or at least equal to 0. Try again");
+                        tempDouble = input.nextDouble();
+                    }
+                    temp.setPrice( tempDouble );
+                case 5:
+                    System.out.println("Is paid per unit: " + temp.getName());
+                    System.out.println("Paid per unit(write true or false):");
+                    text = input.nextLine();
+                    while( !text.equals("true") && !text.equals("false") ){
+                        System.out.println("Only true or false value is acceptable. Try again");
+                        text = input.nextLine();
+                    }
+                    if( text.equals("true")){
+                        temp.setPricePerUnit( true );
+                    }
+                    else{
+                        temp.setPricePerUnit( false );
+                    }
+            }
+        }
+
+
     }
-    public void changeProduct(String name, String type, double numberOfGoods, double price, boolean pricePerUnit){
+    public void changeProduct(Goods good, String name, String type, double numberOfGoods, double price, boolean pricePerUnit){
 
     }
 }

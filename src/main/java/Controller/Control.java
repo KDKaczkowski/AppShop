@@ -1,5 +1,6 @@
 package Controller;
 
+import CommercialGoods.Goods;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
 
@@ -18,6 +19,6 @@ public interface Control {
     public void getAddProductValues() throws AdditionFailed;
     public void addNewProduct(String name, String type, double numberOfGoods, double price, boolean pricePerUnit) throws AdditionFailed;
     public void addExistingProduct(String name, double numberOfGoods);
-    public void getChangeProductValues(String name);
-    public void changeProduct(String name, String type, double numberOfGoods, double price, boolean pricePerUnit);
+    public void getChangeProductValues() throws ObjectNotFound;
+    public void changeProduct(Goods good, String name, String type, double numberOfGoods, double price, boolean pricePerUnit);
 }
