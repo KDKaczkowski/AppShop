@@ -14,7 +14,7 @@ import java.util.*;
 public class PrimitiveDB  implements DB{
 
    private final String [] TYPES = {"Bakery", "Candy", "Dairy", "Drink", "Meat"};
-    private boolean inTYPES(String type){
+   public boolean inTYPES(String type){
         for (int i = 0; i < 5; i++) {
             if(type == TYPES[i])
                 return true;
@@ -94,6 +94,17 @@ public class PrimitiveDB  implements DB{
         throw new ObjectNotFound();
     }
 
+
+    public void setGood(Goods good) throws AdditionFailed{
+        if(good.getName() == null
+                || !inTYPES( good.getType() )
+                || good.getPrice() <= 0
+                || good.getNumberOfGoods() <0 /// SET WHOLE GOOD TODO
+        ){
+            throw new AdditionFailed();
+        }
+
+    }
     public Goods getGoodByName(String name) throws ObjectNotFound {
         for(Goods value: mapOfGoods.values()) {
             if (value.getName().equals(name)){

@@ -2,6 +2,7 @@ package Controller;
 
 import CommercialGoods.Goods;
 import DB.PrimitiveDB;
+import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
 import Users.Admin;
 import Users.Customer;
@@ -157,7 +158,7 @@ public class Controller implements Control{
 
 
     }
-    public void registerAdmin() throws NoSuchAlgorithmException{
+    public void getRegisterAdminValues() throws NoSuchAlgorithmException {
         if (adminLogged){
             Scanner input = new Scanner(System.in);
             String name;
@@ -174,14 +175,17 @@ public class Controller implements Control{
                 password = input.nextLine();
             }
 
-            new Admin(name, password, db);
+            registerAdmin(name,password);
 
         }
         else{
             System.out.println("You can not add admin as Customer");
         }
     }
-    public void registerCustomer(){
+    public void registerAdmin(String name, String password) throws NoSuchAlgorithmException{
+        new Admin(name, password, db);
+    }
+    public void getRegisterCustomerValues(){
         Scanner input = new Scanner(System.in);
         String name;
         String password;
@@ -206,6 +210,10 @@ public class Controller implements Control{
             }
 
         }
+        registerCustomer(name,password,cash);
+
+    }
+    public void registerCustomer(String name, String password, double cash){
         new Customer(name, password, cash, db);
     }
     public void chooseProductToBuyFromAll(){
@@ -278,5 +286,85 @@ public class Controller implements Control{
         else{
             System.out.println("We are sorry, but we ran out of this product. ");
         }
+    }
+
+    public void getAddProductValues() throws AdditionFailed {
+        if(adminLogged){
+            String name, type;
+            double numberOfGoods, price;
+            boolean pricePerUnit = false;
+            Scanner input = new Scanner(System.in);
+            System.out.println("Name of the product:");
+            name = input.nextLine();
+            while(name.isBlank()){
+                System.out.println("Name can not be empty neither can be only spaces. Try again.");
+                name = input.nextLine();
+            }
+            System.out.println("----List of types----");
+            System.out.println("Bakery");
+            System.out.println("Candy");
+            System.out.println("Dairy");
+            System.out.println("Drink");
+            System.out.println("Meat");
+            System.out.println("Type of the product:");
+            type = input.nextLine();
+            type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
+            while( type.isBlank() && db.inTYPES( type ) ){
+                if(type.isBlank())
+                    System.out.println("Type can not be empty neither can be only spaces. Try again.");
+                else
+                    System.out.println("Only proper type is accepted");
+                type = input.nextLine();
+                type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
+            }
+
+            System.out.println("How much pieces of this products:");
+            numberOfGoods = input.nextDouble();
+            while( numberOfGoods < 0 ){
+                System.out.println("Use number greater or equal to zero. Try again.");
+                numberOfGoods = input.nextDouble();
+            }
+
+            System.out.println("Price of this product:");
+            price = input.nextDouble();
+            while( price < 0 ){
+                System.out.println("Use price greater or equal to zero. Try again.");
+                price = input.nextDouble();
+            }
+            System.out.println("If this product is going to be sold by pieces enter 1, if it will be sold by kilograms enter 2");
+            int temp;
+            temp = input.nextInt();
+            while( temp != 1 && temp !=0){
+                System.out.println("Use number greater or equal to zero. Try again.");
+                temp = input.nextInt();
+            }
+            pricePerUnit = temp == 1;
+            addNewProduct(name, type, numberOfGoods, price, pricePerUnit);
+
+
+        }
+    }
+
+    public void addNewProduct(String name, String type, double numberOfGoods, double price, boolean pricePerUnit) throws AdditionFailed {
+            db.addNewGood(new Goods(name, type, numberOfGoods, price, pricePerUnit ));
+    }
+    public void addExistingProduct(String name, double numberOfGoods){
+            db.addOrRemoveExistingGood(name, numberOfGoods);
+    }
+    public void getChangeProductValues(){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter name of product that you want to change");
+        db.printAllProducts();
+        String name = input.nextLine();
+        try{
+            Goods temp = db.getGoodByName(name);
+        } catch(ObjectNotFound notFound){
+            System.out.println("Product not found. Back to the MENU");
+        }
+        System.out.println("If you want to change value, enter new name or number. In other case press enter");
+        System.out.println("Current name: " + db.ge);
+    }
+    public void changeProduct(String name, String type, double numberOfGoods, double price, boolean pricePerUnit){
+
     }
 }
