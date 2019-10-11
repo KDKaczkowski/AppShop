@@ -292,7 +292,7 @@ public class Controller implements Control{
         if(adminLogged){
             String name, type;
             double numberOfGoods, price;
-            boolean pricePerUnit = false;
+            boolean pricePerUnit;
             Scanner input = new Scanner(System.in);
             System.out.println("Name of the product:");
             name = input.nextLine();
@@ -313,7 +313,7 @@ public class Controller implements Control{
                 if(type.isBlank())
                     System.out.println("Type can not be empty neither can be only spaces. Try again.");
                 else
-                    System.out.println("Only proper type is accepted");
+                    System.out.println("Only proper types are acceptable");
                 type = input.nextLine();
                 type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
             }
@@ -347,6 +347,34 @@ public class Controller implements Control{
 
     public void addNewProduct(String name, String type, double numberOfGoods, double price, boolean pricePerUnit) throws AdditionFailed {
             db.addNewGood(new Goods(name, type, numberOfGoods, price, pricePerUnit ));
+    }
+    public void getAddExistingProductValues(){
+        if(adminLogged){
+            Scanner input = new Scanner(System.in);
+            String name;
+            double numberOfGoods;
+            double temp;
+            System.out.println("Name of a product that you want to add or remove");
+            name = input.nextLine();
+            while(name.isBlank()){
+                System.out.println("Name can not be empty neither can be only spaces. Try again.");
+                name = input.nextLine();
+            }
+            try{
+                temp = db.getGoodByName(name).getNumberOfGoods();
+            } catch (ObjectNotFound notFound){
+                System.out.println("Product not found. Try again");
+                return;
+            }
+            System.out.println("How many products you want to add or remove? There is " + temp + " products now");
+            numberOfGoods = input.nextDouble();
+            while( temp + numberOfGoods < 0 ){
+                System.out.println("You can not remove more products than you have");
+                numberOfGoods = input.nextDouble();
+            }
+            addExistingProduct(name, numberOfGoods);
+
+        }
     }
     public void addExistingProduct(String name, double numberOfGoods){
             db.addOrRemoveExistingGood(name, numberOfGoods);
@@ -434,6 +462,58 @@ public class Controller implements Control{
 
     }
     public void changeProduct(Goods good, String name, String type, double numberOfGoods, double price, boolean pricePerUnit){
+        good.setName( name );
+        good.setType( type );
+        good.setNumberOfGoods( numberOfGoods );
+        good.setPrice( price );
+        good.setPricePerUnit( pricePerUnit );
+    }
 
+    @Override
+    public void getFindCustomervalues() throws ObjectNotFound {
+        if(adminLogged){
+            String name;
+            Scanner input = new Scanner(System.in);
+            name = input.nextLine();
+            while(name.isBlank()){
+                System.out.println("Name can not be blank. Try again");
+                name = input.nextLine();
+            }
+            findCustomer( name );
+        }
+    }
+
+    @Override
+    public Customer findCustomer(String name) throws ObjectNotFound {
+        return db.getCustomerByName( name );
+    }
+
+    public void showMenu(){
+        if(!logged){
+            System.out.println("1. Register customer account");
+            System.out.println("2. Login on customer account");
+            System.out.println("3. Login on admin account");
+        }
+        else{
+            if(adminLogged){
+                System.out.println("Hello " + loggedName);
+                System.out.println("1. Add new product");
+                System.out.println("2. Add or remove existing existing products to/from magazine");
+                System.out.println("3. Register new admin account");
+                System.out.println("4. Register new customer account");
+                System.out.println("5. Change product values");
+                System.out.println("6. Find customer");
+                System.out.println("7. Log out");
+            }
+            else{
+                System.out.println("Hello " + loggedName);
+                System.out.println("1. Deposit money into your account");
+                System.out.println("2. Show all products");
+                System.out.println("3. Choose one type of products that you want to see");
+                System.out.println("4. Buy a product");
+                System.out.println("5. Buy a product of specific type");
+                System.out.println("6. Log out");
+            }
+        }
     }
 }

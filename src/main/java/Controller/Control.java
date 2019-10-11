@@ -3,6 +3,7 @@ package Controller;
 import CommercialGoods.Goods;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
+import Users.Customer;
 
 import java.security.NoSuchAlgorithmException;
 
@@ -21,4 +22,7 @@ public interface Control {
     public void addExistingProduct(String name, double numberOfGoods);
     public void getChangeProductValues() throws ObjectNotFound;
     public void changeProduct(Goods good, String name, String type, double numberOfGoods, double price, boolean pricePerUnit);
+    public void getFindCustomervalues() throws ObjectNotFound;
+    public Customer findCustomer(String name) throws ObjectNotFound;
+    public void showMenu();
 }

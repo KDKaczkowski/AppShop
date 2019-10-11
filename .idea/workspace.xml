@@ -3,14 +3,19 @@
   <component name="ChangeListManager">
     <list default="true" id="2d5f046c-8098-42a8-82ff-0272fc802407" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CommercialGoods/Goods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Control.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/CommercialGoods/Goods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/CommercialGoods/Goods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Controller/ControllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controller/Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Control.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/Controller/ControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Controller/ControllerTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -120,7 +125,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControllerTest.logOutAdminFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.registerAdmin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -130,13 +135,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
       <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
-      <option name="METHOD_NAME" value="logOutAdminFailed" />
+      <option name="METHOD_NAME" value="registerAdmin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControllerTest.logoutCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.registerAdminFailedBlankName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -146,13 +151,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
       <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
-      <option name="METHOD_NAME" value="logoutCustomer" />
+      <option name="METHOD_NAME" value="registerAdminFailedBlankName" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControllerTest.logoutCustomerFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ControllerTest.registerCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AppShop" />
       <extension name="coverage">
         <pattern>
@@ -162,7 +167,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="Controller" />
       <option name="MAIN_CLASS_NAME" value="Controller.ControllerTest" />
-      <option name="METHOD_NAME" value="logoutCustomerFailed" />
+      <option name="METHOD_NAME" value="registerCustomer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -185,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ControllerTest.registerCustomer" />
+        <item itemvalue="JUnit.ControllerTest.registerAdminFailedBlankName" />
+        <item itemvalue="JUnit.ControllerTest.registerAdmin" />
         <item itemvalue="JUnit.PrimitiveDBTest" />
         <item itemvalue="JUnit.ControllerTest" />
-        <item itemvalue="JUnit.ControllerTest.logOutAdminFailed" />
-        <item itemvalue="JUnit.ControllerTest.logoutCustomerFailed" />
-        <item itemvalue="JUnit.ControllerTest.logoutCustomer" />
       </list>
     </recent_temporary>
   </component>
@@ -225,6 +230,7 @@
       <workItem from="1566561507318" duration="1509000" />
       <workItem from="1568893678379" duration="1912000" />
       <workItem from="1570730083985" duration="4494000" />
+      <workItem from="1570749698509" duration="3636000" />
     </task>
     <servers />
   </component>

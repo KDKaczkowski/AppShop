@@ -123,9 +123,8 @@ public class Customer extends User { //TODO How about private
     }
 
 
-    public void createNewBasket(){
-        if (!historicalBaskets.isEmpty())
-            historicalBaskets.add(this.basket);
+    public void createNewBasket(){ //Cos bylo ze historical baskets jak nie puste to dodac ale to chyba zle zobaczy sie
+        historicalBaskets.add(this.basket);
         this.basket.clearBasket();
     }
 

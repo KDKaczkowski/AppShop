@@ -1,19 +1,28 @@
-import CommercialGoods.Goods;
 import Controller.Controller;
 import DB.PrimitiveDB;
 import Exceptions.AdditionFailed;
 import Exceptions.ObjectNotFound;
-import Users.Admin;
-import Users.Customer;
 
 import java.security.NoSuchAlgorithmException;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) throws AdditionFailed, ObjectNotFound, NoSuchAlgorithmException {
         PrimitiveDB db = new PrimitiveDB(false);
         Controller controller = new Controller(db);
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome in grocery store. Feel free to register and buy whatever you want!");
+        int helpful;
 
-        db.printAllProducts();
+
+
+        while(true){
+            controller.showMenu();
+            System.out.println("Choose an action that you want to do by typing number");
+
+            break;
+        }
+        /*db.printAllProducts();
         Customer customer = new Customer("Kamil", "yafud", 540, db);
         for(Goods element : db.getGoodsOfType("Bakery")){
             System.out.println(element.getName());
@@ -40,7 +49,7 @@ public class Main {
 
         for(Customer el : db.getSetOfCustomers()){
             System.out.println("   Name" + el.getName());
-        }
+        }*/
 
     }
 }

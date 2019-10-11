@@ -99,7 +99,7 @@ public class PrimitiveDB  implements DB{
         if(good.getName() == null
                 || !inTYPES( good.getType() )
                 || good.getPrice() <= 0
-                || good.getNumberOfGoods() <0 /// SET WHOLE GOOD TODO
+                || good.getNumberOfGoods() <0 /// How about setting everything at once? Idk if that is necessary or even useful
         ){
             throw new AdditionFailed();
         }

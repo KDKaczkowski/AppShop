@@ -28,33 +28,36 @@ class ControllerTest {
         Customer customer = new Customer("Kamil", "swieczka", 23, db);
         Goods good = new Goods("Dark bread", "Bakery", 12, 34.65, true);
         db.addNewGood(good);
-        db.addNewGood(new Goods("White bread", "Bakery", 12, 2.50, true) );
+        db.addNewGood(new Goods("White bread", "Bakery", 12, 2.50, true));
         db.addNewGood(new Goods("Kaiser roll", "Bakery", 132, 12.50, true));
         db.addNewGood(new Goods("Lay's Paprika", "Candy", 122, 22.50, true));
 
     }
+
     @AfterEach
     void logout() throws ObjectNotFound, NoSuchAlgorithmException {
         controller.setAdminLogged(false);
         controller.setLogged(false);
         controller.setLoggedName(null);
     }
+
     @Test
     void loginCustomer() throws NoSuchAlgorithmException {
         controller.login("Kamil", "swieczka");
         assertAll(
                 () -> assertEquals(controller.getLoggedName(), "Kamil"),
-                () -> assertTrue(controller.isLogged() ),
-                () -> assertFalse(controller.isAdminLogged() )
+                () -> assertTrue(controller.isLogged()),
+                () -> assertFalse(controller.isAdminLogged())
         );
     }
+
     @Test
     void loginAdmin() throws NoSuchAlgorithmException {
         controller.login("Blazej", "bykowar");
         assertAll(
                 () -> assertEquals(controller.getLoggedName(), "Blazej"),
-                () -> assertTrue(controller.isLogged() ),
-                () -> assertTrue(controller.isAdminLogged() )
+                () -> assertTrue(controller.isLogged()),
+                () -> assertTrue(controller.isAdminLogged())
         );
     }
 
@@ -63,8 +66,8 @@ class ControllerTest {
         controller.login("Window", "carpet");
         assertAll(
                 () -> assertNull(controller.getLoggedName()),
-                () -> assertFalse(controller.isLogged() ),
-                () -> assertFalse(controller.isAdminLogged() )
+                () -> assertFalse(controller.isLogged()),
+                () -> assertFalse(controller.isAdminLogged())
         );
     }
 
@@ -76,10 +79,11 @@ class ControllerTest {
         controller.logout("bykowar");
         assertAll(
                 () -> assertNull(controller.getLoggedName()),
-                () -> assertFalse(controller.isLogged() ),
-                () -> assertFalse(controller.isAdminLogged() )
+                () -> assertFalse(controller.isLogged()),
+                () -> assertFalse(controller.isAdminLogged())
         );
     }
+
     @Test
     void logoutCustomer() throws ObjectNotFound, NoSuchAlgorithmException {
         controller.setLogged(true);
@@ -87,10 +91,11 @@ class ControllerTest {
         controller.logout("swieczka");
         assertAll(
                 () -> assertNull(controller.getLoggedName()),
-                () -> assertFalse(controller.isLogged() ),
-                () -> assertFalse(controller.isAdminLogged() )
+                () -> assertFalse(controller.isLogged()),
+                () -> assertFalse(controller.isAdminLogged())
         );
     }
+
     @Test
     void logoutCustomerFailed() throws ObjectNotFound, NoSuchAlgorithmException {
         controller.setLoggedName("Kamil");
@@ -98,8 +103,8 @@ class ControllerTest {
         controller.logout("apple");
         assertAll(
                 () -> assertEquals(controller.getLoggedName(), "Kamil"),
-                () -> assertTrue(controller.isLogged() ),
-                () -> assertFalse(controller.isAdminLogged() )
+                () -> assertTrue(controller.isLogged()),
+                () -> assertFalse(controller.isAdminLogged())
         );
     }
 
@@ -111,28 +116,23 @@ class ControllerTest {
         controller.logout("apple");
         assertAll(
                 () -> assertEquals(controller.getLoggedName(), "Blazej"),
-                () -> assertTrue(controller.isLogged() ),
-                () -> assertTrue(controller.isAdminLogged() )
+                () -> assertTrue(controller.isLogged()),
+                () -> assertTrue(controller.isAdminLogged())
         );
     }
 
     @Test
-    void registerAdmin() {
+    void registerAdmin() throws NoSuchAlgorithmException, ObjectNotFound {
+        controller.registerAdmin("Kamil", "malpka");
+        assertNotNull(db.getAdminByName("Kamil"));
     }
 
-    @Test
-    void registerCustomer() {
-    }
 
     @Test
-    void chooseProductToBuyFromAll() {
+    void registerCustomer() throws ObjectNotFound {
+        controller.registerCustomer("Kamil", "malpka", 123);
+        assertNotNull(db.getCustomerByName("Kamil"));
     }
 
-    @Test
-    void chooseProductToBuyFromType() {
-    }
 
-    @Test
-    void buyProduct() {
-    }
 }
