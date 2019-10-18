@@ -16,6 +16,10 @@ public class Customer extends User { //TODO How about private
     @NotEmpty
     private double cashOnAccount;
 
+    public Customer() {
+
+    }
+
     public Basket getBasket() {
         return basket;
     }

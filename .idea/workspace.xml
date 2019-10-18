@@ -6,16 +6,13 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Control.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Control.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DB/PrimitiveDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Exceptions/ObjectNotFound.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Users/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Users/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Controller/ControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Controller/ControllerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/Control.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Control.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controller/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controller/Controller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Exceptions/ObjectNotFound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DB/PrimitiveDB.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Users/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Users/Customer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/Controller/ControllerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/Controller/ControllerTest.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,11 +39,6 @@
         <option value="Interface" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>listOfBakeries</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -231,6 +223,7 @@
       <workItem from="1568893678379" duration="1912000" />
       <workItem from="1570730083985" duration="4494000" />
       <workItem from="1570749698509" duration="3636000" />
+      <workItem from="1571427887832" duration="6951000" />
     </task>
     <servers />
   </component>
@@ -263,81 +256,5 @@
     <SUITE FILE_PATH="coverage/ShopApp$PrimitiveDBTest_getGoodByName.ic" NAME="PrimitiveDBTest.getGoodByName Coverage Results" MODIFIED="1564478148452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>DB.*</FILTER>
     </SUITE>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>12</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>AppShop</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: org.apiguardian:apiguardian-api:1.1.0</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>

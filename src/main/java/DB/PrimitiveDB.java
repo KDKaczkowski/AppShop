@@ -16,7 +16,7 @@ public class PrimitiveDB  implements DB{
    private final String [] TYPES = {"Bakery", "Candy", "Dairy", "Drink", "Meat"};
    public boolean inTYPES(String type){
         for (int i = 0; i < 5; i++) {
-            if(type == TYPES[i])
+            if(type.equals(TYPES[i]))
                 return true;
         }
         return false;
@@ -39,16 +39,7 @@ public class PrimitiveDB  implements DB{
 
     private ListMultimap<String, Goods> mapOfGoods= MultimapBuilder.hashKeys().arrayListValues().build();
 
-    /*private List<String> listOfBakeries = new ArrayList<String>(); // Probably useless
 
-    private List<String> listOfCandies = new ArrayList<String>();
-
-    private List<String> listOfDairies = new ArrayList<String>();
-
-    private List<String> listOfDrinks = new ArrayList<String>();
-
-    private List<String> listOfMeats = new ArrayList<String>();*/
-    ////////////////////////////////////////////////////////////
     public Admin getAdminByName(String name) throws ObjectNotFound {
         for(Admin admin: setOfAdmins){
             if(admin.getName().equals(name))
@@ -95,19 +86,7 @@ public class PrimitiveDB  implements DB{
     }
 
 
-    /*public void setGood(Goods good) throws AdditionFailed{
-        if(good.getName() == null
-                || !inTYPES( good.getType() )
-                || good.getPrice() <= 0
-                || good.getNumberOfGoods() <0 /// How about setting everything at once? Idk if that is necessary or even useful
-        ){
-            throw new AdditionFailed();
-        }
-        else{
 
-        }
-
-    }*/
     public Goods getGoodByName(String name) throws ObjectNotFound {
         for(Goods value: mapOfGoods.values()) {
             if (value.getName().equals(name)){
@@ -144,7 +123,7 @@ public class PrimitiveDB  implements DB{
         double temp;
         try{
             temp = this.getGoodByName(name).getNumberOfGoods();
-        } catch(ObjectNotFound objectNotFound){ //TODO What's better catch Exception here or catch it in main program?
+        } catch(ObjectNotFound objectNotFound){
             return;
         }
         try {
@@ -175,7 +154,8 @@ public class PrimitiveDB  implements DB{
         for( Map.Entry<String, Goods> entry : mapOfGoods.entries()){
             String key= entry.getKey();
             Goods value = entry.getValue();
-            System.out.println("Type: " + key + " Name: " + value.getName() + "  Price: "+ value.getPrice() + " Number of Products: " + value.getNumberOfGoods() + "Price per unit: " + value.isPricePerUnit());
+            System.out.println();
+            System.out.println("Type: " + key + "    Name: " + value.getName() + "    Price: "+ value.getPrice() + "     Number of Products: " + value.getNumberOfGoods() + "    Price per unit: " + value.isPricePerUnit());
         }
     }
 
@@ -183,7 +163,8 @@ public class PrimitiveDB  implements DB{
     public void printAllProductsOfType(String type) {
         try{
             for(Goods element : getGoodsOfType( type )){
-                System.out.println("Type: " + element.getType() + " Name: " + element.getName() + "  Price: "+ element.getPrice() + " Number of Products: " + element.getNumberOfGoods() + "Price per unit: " + element.isPricePerUnit());
+                System.out.println();
+                System.out.println("Type: " + element.getType() + "     Name: " + element.getName() + "   Price: "+ element.getPrice() + "    Number of Products: " + element.getNumberOfGoods() + "    Price per unit: " + element.isPricePerUnit());
             }
         } catch (ObjectNotFound notFound){
             System.out.println("Can not find this type of products");
@@ -238,91 +219,9 @@ public class PrimitiveDB  implements DB{
         this.setOfCustomers.add(customer);
     }
 
-    /*public List<String> getListOfBakeries() {
-        return listOfBakeries;
-    }
 
-    public void addBakery(String name) {
-        this.listOfBakeries.add(name);
-    }
-
-    public List<String> getListOfCandies() {
-        return listOfCandies;
-    }
-
-    public void addCandy(String name) {
-        this.listOfCandies.add(name);
-    }
-
-    public List<String> getListOfDairies() {
-        return listOfDairies;
-    }
-
-    public void addDairy(String name) {
-        this.listOfDairies.add(name);
-    }
-
-    public List<String> getListOfDrinks() {
-        return listOfDrinks;
-    }
-
-    public void addDrink(String name) {
-        this.listOfDrinks.add(name);
-    }
-
-    public List<String> getListOfMeats() {
-        return listOfMeats;
-    }
-
-    public void addMeat(String name) {
-        this.listOfMeats.add(name);
-    }*/
 
     private void STARTER() throws AdditionFailed{
-        /*// BAKERY /////
-        this.addBakery("White bread");
-        this.addBakery("Dark bread");
-        this.addBakery("Sliced white bread");
-        this.addBakery("Sliced dark bread");
-        this.addBakery("Kaiser roll");
-        this.addBakery("Chocolate donut");
-        this.addBakery("Donut");
-        this.addBakery("Pudding donut");
-        // CANDY /////
-        this.addCandy("Dark chocolate");
-        this.addCandy("Milky chocolate");
-        this.addCandy("White chocolate");
-        this.addCandy("Mars");
-        this.addCandy("NoName");
-        this.addCandy("Snickers");
-        this.addCandy("Knoppers");
-        this.addCandy("Jelly");
-        this.addCandy("Python's jellies");
-        this.addCandy("Lay's Paprika");
-        this.addCandy("Lay's Fromage");
-        // DAIRY /////
-        this.addDairy("Milk");
-        this.addDairy("Chocolate milk");
-        this.addDairy("Yoghurt with strawberries");
-        this.addDairy("Yoghurt with pineapple");
-        this.addDairy("Yoghurt");
-        this.addDairy("Cheese");
-        this.addDairy("White Cheese");
-        // DRINKS /////
-        this.addDrink("Coca Cola");
-        this.addDrink("Water");
-        this.addDrink("Sprite");
-        this.addDrink("Monster");
-        this.addDrink("Mountain Dew");
-        this.addDrink("Coconut water");
-        this.addDrink("Zbyszko trzy cytryny");
-        this.addDrink("RedBull");
-        // MEATS /////
-        this.addMeat("Ham");
-        this.addMeat("Parma ham");
-        this.addMeat("Śląska gięta");
-        this.addMeat("Normal Sausage");
-        this.addMeat("Roasted chicken");*/
 
         //////////////////////////////////////////////////////////////
         //////////////////////////////////////////////////////////////

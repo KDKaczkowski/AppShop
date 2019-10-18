@@ -23,6 +23,12 @@ public interface Control {
     public void getChangeProductValues() throws ObjectNotFound;
     public void changeProduct(Goods good, String name, String type, double numberOfGoods, double price, boolean pricePerUnit);
     public void getFindCustomervalues() throws ObjectNotFound;
+    public void depositMoney();
+    public void printAllProducts();
+    public void printAllProductsOfOneType();
+    public void printSpecificProduct();
     public Customer findCustomer(String name) throws ObjectNotFound;
+    public void chooseProductToBuyFromType();
+    public void chooseProductToBuyFromAll();
     public void showMenu();
 }

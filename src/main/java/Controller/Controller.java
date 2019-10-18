@@ -129,24 +129,29 @@ public class Controller implements Control{
             }
             this.logout( password );
         }
-        System.out.println("Nobody is logged. Can not log out");
+        else {
+            System.out.println("Nobody is logged. Can not log out");
+        }
     }
     public void logout(String password) throws ObjectNotFound, NoSuchAlgorithmException {
         Admin temp = new Admin();
         temp.setPassword( password );
-        if(adminLogged){
-            if( temp.getPassword().equals( db.getAdminByName( loggedName ).getPassword() ) ){
-                adminLogged = false;
+
+        if(!adminLogged && logged){
+            if( temp.getPassword().equals( db.getCustomerByName( loggedName ).getPassword() )){
                 logged = false;
+                adminLogged = false;
                 loggedName = null;
                 System.out.println("Logged out successfully");
             }
             else {
                 System.out.println("Wrong password, can not log out.");
             }
+
         }
-        else{
-            if( temp.getPassword().equals( db.getCustomerByName( loggedName ).getPassword() )){
+        else if(adminLogged){
+            if( temp.getPassword().equals( db.getAdminByName( loggedName ).getPassword() ) ){
+                adminLogged = false;
                 logged = false;
                 loggedName = null;
                 System.out.println("Logged out successfully");
@@ -190,12 +195,13 @@ public class Controller implements Control{
         String name;
         String password;
         double cash = 0;
-        System.out.println("Enter name:");
+        System.out.println("Enter name: ");
         name = input.nextLine();
         while (name.isBlank()){
             System.out.println("Invalid data - name is empty or it is only space. Try again.");
             name = input.nextLine();
         }
+        System.out.println("Enter password: ");
         password = input.nextLine();
         while (password.isBlank()){
             System.out.println("Invalid data - name is empty or it is only space. Try again.");
@@ -233,9 +239,28 @@ public class Controller implements Control{
         }
 
     }
-    public void chooseProductToBuyFromType(String type){
+    public void chooseProductToBuyFromType(){
         if(logged && !adminLogged){
+            String type;
             Scanner input = new Scanner(System.in);
+            System.out.println("Which type of product you want to print");
+            System.out.println("----List of types----");
+            System.out.println("Bakery");
+            System.out.println("Candy");
+            System.out.println("Dairy");
+            System.out.println("Drink");
+            System.out.println("Meat");
+            System.out.println("Type of the product:");
+            type = input.nextLine();
+            type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
+            while( type.isBlank() && db.inTYPES( type ) ){
+                if(type.isBlank())
+                    System.out.println("Type can not be empty neither can be only spaces. Try again.");
+                else
+                    System.out.println("Only proper types are acceptable");
+                type = input.nextLine();
+                type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
+            }
             System.out.println("------Choose a product to buy from the list below------");
             db.printAllProductsOfType(type);
             System.out.println("Enter name of product that you want buy or click enter if you did not want to buy anything: ");
@@ -484,6 +509,105 @@ public class Controller implements Control{
     }
 
     @Override
+    public void depositMoney() {
+        if(logged)
+        {
+            Scanner input = new Scanner(System.in);
+            Customer temporary;
+            if(adminLogged)
+            {
+                System.out.println("Enter name of account on which you want to donate money: ");
+                String name = input.nextLine();
+                while( name.isBlank() )
+                {
+                    System.out.println("Name can not be blank. Try again");
+                    name = input.nextLine();
+                }
+                try
+                {
+                    temporary = db.getCustomerByName( name );
+                }
+                catch(ObjectNotFound notFound)
+                {
+                    System.out.println("We do not have customer named like this.");
+                    return;
+                }
+
+                System.out.println("Enter how many money you want to donate: ");
+                double temp = input.nextDouble();
+                while( temp < 0)
+                {
+                    System.out.println("You can not donate less than 0 money. Enter money again");
+                    temp = input.nextDouble();
+                }
+                try {
+                    db.getCustomerByName(name).setCashOnAccount(temporary.getCashOnAccount() + temp);
+                }catch(ObjectNotFound ignored){}
+                System.out.println("Donated successfully");
+            }
+            else
+            {
+                System.out.println("How much money you want to donate on your account?");
+                double temp = input.nextDouble();
+                while( temp < 0)
+                {
+                    System.out.println("You can not donate less than 0 money. Enter money again");
+                    temp = input.nextDouble();
+                }
+                try {
+                    db.getCustomerByName(loggedName).setCashOnAccount(
+                            db.getCustomerByName(loggedName).getCashOnAccount() + temp
+                    );
+                }catch(ObjectNotFound ignored){}
+                System.out.println("Donated successfully");
+            }
+        }
+    }
+
+    @Override
+    public void printAllProducts() {
+        db.printAllProducts();
+        return;
+    }
+
+    @Override
+    public void printAllProductsOfOneType() {
+        String type;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Which type of product you want to print");
+        System.out.println("----List of types----");
+        System.out.println("Bakery");
+        System.out.println("Candy");
+        System.out.println("Dairy");
+        System.out.println("Drink");
+        System.out.println("Meat");
+        System.out.println("Type of the product:");
+        type = input.nextLine();
+        type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
+        while( type.isBlank() && db.inTYPES( type ) ){
+            if(type.isBlank())
+                System.out.println("Type can not be empty neither can be only spaces. Try again.");
+            else
+                System.out.println("Only proper types are acceptable");
+            type = input.nextLine();
+            type = type.substring(0, 1).toUpperCase() + type.substring(1).toLowerCase();
+        }
+        db.printAllProductsOfType(type);
+    }
+
+    @Override
+    public void printSpecificProduct() {
+        String name;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter name of a product that you want to print: ");
+        name = input.nextLine();
+        while(name.isBlank()){
+            System.out.println("Name can not be blank. Try again.");
+        }
+        db.printSpecificProduct(name);
+    }
+
+    @Override
     public Customer findCustomer(String name) throws ObjectNotFound {
         return db.getCustomerByName( name );
     }
@@ -491,8 +615,8 @@ public class Controller implements Control{
     public void showMenu(){
         if(!logged){
             System.out.println("1. Register customer account");
-            System.out.println("2. Login on customer account");
-            System.out.println("3. Login on admin account");
+            System.out.println("2. Login on account");
+            System.out.println("3. Exit");
         }
         else{
             if(adminLogged){
@@ -504,15 +628,23 @@ public class Controller implements Control{
                 System.out.println("5. Change product values");
                 System.out.println("6. Find customer");
                 System.out.println("7. Log out");
+                System.out.println("8. Show all products");
+                System.out.println("9. Show all products of specific type");
+                System.out.println("10. Show specific product");
+                System.out.println("11. Donate money to customer's account");
+                System.out.println("12. Exit");
             }
             else{
                 System.out.println("Hello " + loggedName);
                 System.out.println("1. Deposit money into your account");
-                System.out.println("2. Show all products");
-                System.out.println("3. Choose one type of products that you want to see");
-                System.out.println("4. Buy a product");
-                System.out.println("5. Buy a product of specific type");
-                System.out.println("6. Log out");
+                System.out.println("2. Show my account");
+                System.out.println("3. Show all products");
+                System.out.println("4. Show all products of specific type");
+                System.out.println("5. Show specific product");
+                System.out.println("6. Buy a product");
+                System.out.println("7. Buy a product of specific type");
+                System.out.println("8. Log out");
+                System.out.println("9. Exit");
             }
         }
     }
